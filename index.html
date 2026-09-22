@@ -546,8 +546,10 @@
   <ul class="nav-links">
     <li><a href="#override">Override</a></li>
     <li><a href="#novetats">Novetats</a></li>
+    <li><a href="#aprofundim">A fons</a></li>
     <li><a href="#normes">Normes</a></li>
     <li><a href="#puntuacio">Puntuació</a></li>
+    <li><a href="#palarobotica">Palarobòtica</a></li>
     <li><a href="#entrades">Blog</a></li>
   </ul>
 </nav>
@@ -612,7 +614,7 @@
       <div class="stat-chip"><span class="val">4</span><span class="lbl">Robots</span></div>
       <div class="stat-chip"><span class="val">15s</span><span class="lbl">Autònom</span></div>
       <div class="stat-chip"><span class="val">1:45</span><span class="lbl">Manual</span></div>
-      <div class="stat-chip"><span class="val">20s</span><span class="lbl">Endgame</span></div>
+      <div class="stat-chip"><span class="val">10s</span><span class="lbl">Endgame</span></div>
       <div class="stat-chip"><span class="val">4</span><span class="lbl">Quadrants</span></div>
     </div>
 
@@ -622,7 +624,7 @@
         <div class="tl-dot"></div>
         <div class="tl-phase">FASE 1 · 0–15 s</div>
         <div class="tl-title">Període Autònom</div>
-        <div class="tl-desc">Els robots actuen sols, sense conductor. L'aliança guanyadora del perío autònom rep <strong>+10 punts</strong> al final del match. Completar les tasques assignades atorga un <em>Autonomous Win Point</em> addicional.</div>
+        <div class="tl-desc">Els robots actuen sols, sense conductor. L'aliança guanyadora del període autònom rep <strong>+12 punts</strong> al final del match (empat = 6 punts cada aliança). Complir uns requisits mínims de puntuació i posicionament atorga a més un <em>Autonomous Win Point</em> a l'equip que els assoleixi.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
@@ -632,9 +634,9 @@
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-phase">FASE 3 · Últims 20 s</div>
+        <div class="tl-phase">FASE 3 · Últims 10 s</div>
         <div class="tl-title">Endgame – Midfield</div>
-        <div class="tl-desc">El camp es torna "rei del turó": els robots han d'entrar a la zona <strong>Midfield</strong> al centre del camp. Els últims 20 s son molt tàctics i congestionats. Posicionar-se bé val punts valuosos.</div>
+        <div class="tl-desc">El camp es torna "rei del turó": els robots han d'acabar amb alguna part dins la zona <strong>Midfield</strong>, al centre del camp. Durant l'Endgame ja no es pot col·locar res al Goal central i el contacte hi és més arriscat. Els últims 10 s són els més tàctics i congestionats de tot el match: <strong>8 punts</strong> per cada robot que hi acabi.</div>
       </div>
     </div>
   </div>
@@ -696,12 +698,97 @@
   </div>
 </section>
 
+<!-- APROFUNDIM: EXPLICACIÓ A FONS DEL JOC -->
+<section id="aprofundim" class="overview-bg">
+  <div class="container">
+    <p class="section-label">El joc a fons</p>
+    <h2 class="section-title">Com funciona <span>Override</span>, pas a pas</h2>
+    <p class="section-desc">Override no és només "apilar peces". Cada mecànica té la seva lletra petita al Game Manual v2.0, i entendre-la bé és el que marca la diferència entre un match guanyat i un de perdut. Aquí ho expliquem a fons.</p>
+
+    <div class="rules-grid fade-in" style="margin-bottom:2rem;">
+
+      <div class="rule-card">
+        <div class="rule-icon ri-accent">📌</div>
+        <h4>Els Pins: dues meitats, dos colors</h4>
+        <ul>
+          <li>Cada Pin té <strong>dues meitats</strong>: vermell/blau, vermell/groc, blau/groc o groc/groc</li>
+          <li>Cada meitat que quedi <strong>visible i col·locada</strong> en un Goal puntua per separat, per l'aliança del seu color</li>
+          <li>Un mateix Pin pot arribar a donar punts a <strong>les dues aliances alhora</strong> si té una meitat de cada color</li>
+          <li>Pin del color propi = <strong class="pts" style="font-size:.88rem;">5 pts</strong> · Pin groc "Owned" = <strong class="pts" style="font-size:.88rem;">10 pts</strong></li>
+        </ul>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-icon ri-blue">🥤</div>
+        <h4>Les Cups: encaixades als Goals</h4>
+        <ul>
+          <li>Una Cup es considera <strong>col·locada</strong> quan queda encaixada dins un Goal (no simplement tocant-lo)</li>
+          <li>Les Cups no puntuen per si soles, però <strong>bloquegen i protegeixen</strong> els Pins que hi ha a sota seu dins el Goal</li>
+          <li>Bona estratègia: protegir els teus Pins ja col·locats amb una Cup a sobre perquè el rival no els pugui treure</li>
+        </ul>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-icon ri-gold">🔀</div>
+        <h4>Toggles i "Ownership" dels Pins grocs</h4>
+        <ul>
+          <li>Cada <strong>Quadrant</strong> del camp té un Toggle que es pot posar en vermell o blau</li>
+          <li>Un Toggle es considera <strong>"set"</strong> quan queda totalment encaixat al seu color i cap robot el toca</li>
+          <li>L'aliança que domina el Toggle d'un Quadrant <strong>"posseeix"</strong> els Pins grocs d'aquell Quadrant, i sumen 10 pts cadascun</li>
+          <li>Al Midfield, la possessió dels Pins grocs la decideix quin equip hi té <strong>més robots</strong> en acabar el match</li>
+        </ul>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-icon ri-green">🥇</div>
+        <h4>Autonomous Win Point</h4>
+        <ul>
+          <li>És un punt de classificació <strong>a banda</strong> del bonus de 12 pts de l'autònom</li>
+          <li>Cal arribar a un mínim de Pins puntuats (6, o 7 als esdeveniments classificatoris per a Worlds)</li>
+          <li>Cal tenir com a mínim <strong>2 Goals amb 2+ Pins</strong> cadascun (3 Goals als classificatoris per a Worlds)</li>
+          <li>Cap robot de l'aliança pot estar tocant el perímetre del camp en aquell instant</li>
+          <li>Cometre una infracció durant l'autònom fa <strong>perdre el bonus</strong>, que passa a l'aliança rival</li>
+        </ul>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-icon ri-red">🤖</div>
+        <h4>Límits del robot</h4>
+        <ul>
+          <li>Mida inicial màxima: <strong>18"×18"×18"</strong> (dins el "sizing box")</li>
+          <li>Expansió horitzontal màxima: <strong>24"×24"</strong> un cop en joc</li>
+          <li>Alçada màxima: <strong>50"</strong>, amb una excepció durant l'Endgame per pujar al Midfield</li>
+          <li>Un únic <strong>V5 Robot Brain</strong> per robot, cap altre microcontrolador, ni tan sols de decoració</li>
+          <li>Límit de potència: <strong>88 W</strong> en total, 55 W per al subsistema de xassís</li>
+        </ul>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-icon ri-purple">🏁</div>
+        <h4>Robot Skills Challenge</h4>
+        <ul>
+          <li><strong>Driving Skills:</strong> 1 minut, només amb comandament, sense autònom</li>
+          <li><strong>Autonomous Coding Skills:</strong> 1 minut, tot programat, sense comandament</li>
+          <li>Cada equip té <strong>3 intents</strong> de cada modalitat per esdeveniment</li>
+          <li>Puntua amb la mateixa taula que un match normal (5/10/8 pts) i compta per als rànquings de Skills</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div style="margin-top:1rem; padding:1.5rem; background: var(--card); border:1px solid rgba(0,212,255,0.15); border-radius:12px;">
+      <h3 style="font-family:'Orbitron',monospace; font-size:.9rem; color:var(--accent); margin-bottom:1rem; letter-spacing:1px;">🇺🇸 El camí cap al Campionat del Món</h3>
+      <p style="color:var(--muted); font-size:.92rem;">Cada equip juga com a mínim <strong style="color:var(--text)">6 Qualification Matches</strong> (8 als esdeveniments de Campionat), i les classificacions decideixen l'<strong style="color:var(--text)">Alliance Selection</strong>: els millors equips escullen company per formar una aliança de cara als <strong style="color:var(--text)">Elimination Matches</strong> (bracket a eliminatòries, a millor de 1 o de 3 partits segons la fase). Guanyar un torneig, endur-se un Excellence Award o quedar entre els primers a Skills dona bitllet per pujar de nivell dins la temporada: de torneig local → regional → i, si tot va bé, al <strong style="color:var(--accent)">VEX Robotics World Championship</strong>, als Estats Units. És exactament el camí que seguim aquest curs: si ens classifiquem, hi som.</p>
+    </div>
+  </div>
+</section>
+
 <!-- NORMES -->
 <section id="normes">
   <div class="container">
     <p class="section-label">Resum de normes</p>
     <h2 class="section-title">Normes bàsiques de<br><span>Override</span></h2>
-    <p class="section-desc">Resum simplificat però complet basat en el Game Manual oficial v0.1 (abril 2026). Sempre consulteu la versió oficial actualitzada a <em>vexrobotics.com</em>.</p>
+    <p class="section-desc">Resum simplificat però complet, actualitzat al Game Manual oficial <strong>v2.0</strong> (3 de setembre de 2026). Sempre consulteu la versió oficial vigent a <em>vexrobotics.com</em>, ja que el GDC publica revisions durant tota la temporada.</p>
 
     <div class="rules-grid fade-in">
 
@@ -733,10 +820,10 @@
         <h4>Regles de camp</h4>
         <ul>
           <li>Posició inicial: robot tocant la <strong>zona de l'aliança</strong></li>
-          <li>Prohibit danyar intencionadament els robots rivals</li>
-          <li>Prohibit el <strong>Goalkeeping</strong> extrem (bloquejar sistemàticament els Objectius)</li>
+          <li>Prohibit danyar intencionadament els robots rivals o el camp</li>
+          <li>Els <strong>Goals de l'aliança i els Goals neutrals</strong> estan protegits: el rival no pot treure'n peces ja col·locades</li>
           <li>Les puntuacions s'avaluen <strong>5 seg. després</strong> que acabi el match</li>
-          <li>Cap element del camp pot ser modificat intencionadament</li>
+          <li>En cas de dubte en el contacte, es dona <strong>benefici del dubte</strong> al robot que ataca</li>
         </ul>
       </div>
 
@@ -796,40 +883,66 @@
       </thead>
       <tbody>
         <tr>
-          <td>Pin col·locat (meitat)</td>
-          <td>Una o dues meitats d'un Pin col·locades en un Objectiu</td>
-          <td class="pts">Variable</td>
+          <td>Pin del color de l'aliança</td>
+          <td>Cada meitat de Pin del teu color, col·locada i visible en un Goal</td>
+          <td class="pts">5 pts</td>
         </tr>
         <tr>
           <td>Pin groc (Owned)</td>
-          <td>Pin groc del quadrant quan el Toggle és del teu color</td>
-          <td class="pts">Bonus</td>
+          <td>Pin groc d'un Quadrant on domines el Toggle (o del Midfield, si hi tens més robots)</td>
+          <td class="pts">10 pts</td>
         </tr>
         <tr>
           <td>Toggle controlat</td>
-          <td>Toggle completament setat al color de l'aliança, sense robot tocant-lo</td>
-          <td class="pts">Control quadrant</td>
+          <td>Toggle completament setat al color de l'aliança, sense cap robot tocant-lo</td>
+          <td class="pts">Control del Quadrant</td>
         </tr>
         <tr>
-          <td>Guanyar el període autònom</td>
-          <td>L'aliança amb més punts durant els primers 15 s</td>
-          <td class="pts">+10 pts</td>
+          <td>Bonus del període autònom</td>
+          <td>L'aliança amb més punts durant els primers 15 s (empat = 6 pts cadascuna)</td>
+          <td class="pts">+12 pts</td>
         </tr>
         <tr>
           <td>Autonomous Win Point</td>
-          <td>Completar tasques específiques durant l'autònom</td>
+          <td>Mínim de Pins i Goals assolits durant l'autònom, sense tocar el perímetre</td>
           <td class="pts">+1 Win Point</td>
         </tr>
         <tr>
-          <td>Posicionament Midfield</td>
-          <td>Robot posicionat a la zona central al final del match (Endgame)</td>
-          <td class="pts">Punts Endgame</td>
+          <td>Robot al Midfield</td>
+          <td>Qualsevol part del robot dins la zona Midfield en acabar el match</td>
+          <td class="pts">8 pts</td>
         </tr>
       </tbody>
     </table>
 
     <div style="margin-top:2rem; padding:1rem 1.5rem; background: rgba(244,163,0,0.08); border:1px solid rgba(244,163,0,0.2); border-radius:8px; font-size:.88rem; color:var(--muted);">
-      ⚠️ <strong style="color:var(--gold)">Nota important:</strong> Els Pins grocs i el control dels Toggles poden generar grans canvis de puntuació molt ràpidament. El manual oficial avisa que el GDC pot ajustar els punts si desequilibren massa les estratègies. Consulteu sempre la <a href="https://content.vexrobotics.com/docs/2026-2027/override/files/override-0.1-game-manual.pdf" target="_blank" style="color:var(--accent)">versió oficial del manual</a>.
+      ⚠️ <strong style="color:var(--gold)">Nota important:</strong> Els Pins grocs i el control dels Toggles poden generar grans canvis de puntuació molt ràpidament. El manual oficial avisa que el GDC pot ajustar els punts si desequilibren massa les estratègies. Consulteu sempre la <a href="https://www.vexrobotics.com/v5/competition/vrc-current-game" target="_blank" style="color:var(--accent)">versió oficial del manual</a>.
+    </div>
+  </div>
+</section>
+
+<!-- PALAROBÒTICA -->
+<section id="palarobotica">
+  <div class="container">
+    <p class="section-label">El nostre context local</p>
+    <h2 class="section-title">Què és la <span>Palarobòtica</span></h2>
+    <p class="section-desc">Abans dels torneigs de VEX, el nostre punt de partida és aquí, a Palafrugell. La Palarobòtica és la jornada STEAM local que ens va posar en contacte amb la robòtica educativa i que cada any dona el tret de sortida a molts equips del territori.</p>
+
+    <div class="about-grid fade-in">
+      <div class="about-card">
+        <h3>🎪 Una jornada STEAM anual a Palafrugell</h3>
+        <p>La <strong>Palarobòtica</strong> és una jornada de programació i robòtica organitzada pel <strong>Grup de Treball de Programació i Robòtica de Palafrugell</strong>, impulsada des del Departament d'Educació (xtec.cat). Se celebra cada any al maig i hi participen centres educatius de totes les etapes, des de P5 fins a Cicles Formatius. Enguany és la <strong>Palarobòtica 2026</strong>, amb activitats el <strong>dijous 7 i divendres 8 de maig</strong>.</p>
+        <span class="team-tag">Organitza: Grup de Treball Prog. i Robòtica Palafrugell</span>
+      </div>
+      <div class="about-card">
+        <h3>🧩 Activitats per edats</h3>
+        <p>Dijous (9h–13h): <strong>BEEfestival</strong> (P5/cicle inicial) i <strong>STEAMproject</strong> (4t de primària). Divendres (9h–14h): <strong>TECNOfestival</strong> per a secundària, <strong>Palarobòtica CONF</strong> per a 2n d'ESO, i el <strong>CODEfestival</strong>, on l'alumnat de Cicles Formatius presenta els seus propis projectes. També hi ha la <strong>Palarobòtica Docents</strong>, una part de la jornada pensada per a formació de professorat.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem; padding:1.5rem; background: var(--card2); border:1px solid rgba(255,255,255,0.06); border-radius:12px;">
+      <h3 style="font-family:'Orbitron',monospace; font-size:.85rem; color:var(--gold); margin-bottom:.8rem; letter-spacing:1px;">🔗 D'aquí cap a Estats Units</h3>
+      <p style="color:var(--muted); font-size:.9rem;">La Palarobòtica ja fa anys que existeix (les primeres edicions daten del 2018) i és un esdeveniment <strong style="color:var(--text)">local i educatiu</strong> del Baix Empordà, diferent de la VEX Robotics Competition: no hi ha classificació ni bitllet directe cap al Mundial. El que ens ha donat és el primer contacte amb la robòtica competitiva a l'escola i l'entorn on molts equips —el nostre inclòs— hem après les bases abans de fer el salt a una competició internacional com VEX. El camí real cap als Estats Units passa pels torneigs oficials de VEX V5RC: si guanyem prou matches i ens classifiquem, el següent pas és el <strong style="color:var(--accent)">VEX Robotics World Championship</strong>.</p>
     </div>
   </div>
 </section>
@@ -884,9 +997,10 @@
         <p style="color:var(--muted); font-size:.9rem;">Tots els documents oficials de la temporada Override 2026‑27</p>
       </div>
       <div style="display:flex; gap:.8rem; flex-wrap:wrap;">
-        <a href="https://content.vexrobotics.com/docs/2026-2027/override/files/override-0.1-game-manual.pdf" target="_blank" class="btn btn-outline" style="font-size:.65rem;">📄 Game Manual</a>
+        <a href="https://www.vexrobotics.com/v5/competition/vrc-current-game" target="_blank" class="btn btn-outline" style="font-size:.65rem;">📄 Game Manual (v2.0)</a>
         <a href="https://www.vexrobotics.com/v5/competition/vrc-current-game" target="_blank" class="btn btn-outline" style="font-size:.65rem;">🌐 VEX Oficial</a>
         <a href="https://www.robotevents.com" target="_blank" class="btn btn-outline" style="font-size:.65rem;">🏆 RobotEvents</a>
+        <a href="https://sites.google.com/xtec.cat/palarobtica/inici" target="_blank" class="btn btn-outline" style="font-size:.65rem;">🎪 Palarobòtica</a>
       </div>
     </div>
   </div>
