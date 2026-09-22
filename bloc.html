@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloc de l'equip – Robòtica VEX V5 – Escola Sant Jordi Palafrugell</title>
+<meta name="description" content="Bloc oficial de l'equip de robòtica VEX de l'Escola Sant Jordi de Palafrugell: equip, historial de reptes des de 1r d'ESO, competicions i diari de classe.">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<style>
+  /* ─── BLOC PAGE HEADER ─── */
+  .bloc-hero {
+    position: relative; z-index: 1;
+    padding: 8rem 2rem 3rem;
+    text-align: center;
+  }
+  .bloc-hero .section-label { justify-content:center; display:flex; }
+  .bloc-hero h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    margin: .5rem 0 1rem;
+  }
+  .bloc-hero h1 span { color: var(--accent); }
+  .bloc-hero p { color: var(--muted); max-width: 620px; margin: 0 auto; }
+
+  /* ─── TEAM ─── */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+  }
+  .team-card {
+    background: var(--card2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    transition: transform .2s, border-color .2s;
+  }
+  .team-card:hover { transform: translateY(-3px); border-color: rgba(0,212,255,0.3); }
+  .team-avatar {
+    width: 56px; height: 56px;
+    margin: 0 auto .8rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--blue));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--darker);
+  }
+  .team-card h4 { font-size: 1rem; margin-bottom: .3rem; }
+  .team-card .role { font-size: .75rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; }
+
+  /* ─── YEAR TIMELINE (reptes) ─── */
+  .year-timeline { display: flex; flex-direction: column; gap: 1.5rem; }
+  .year-card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 1.5rem 1.8rem;
+  }
+  .year-card.is-past { border-left-color: var(--muted); opacity: .88; }
+  .year-card.is-current { border-left-color: var(--gold); box-shadow: 0 0 30px rgba(244,163,0,0.08); }
+  .year-card .yr { font-family:'Orbitron',monospace; font-size:.7rem; letter-spacing:2px; color:var(--accent); text-transform:uppercase; margin-bottom:.3rem; }
+  .year-card.is-current .yr { color: var(--gold); }
+  .year-card h3 { font-size: 1.15rem; margin-bottom: .5rem; }
+  .year-card p { color: var(--muted); font-size: .92rem; }
+  .year-status {
+    display:inline-block; margin-top:.8rem;
+    font-size:.7rem; letter-spacing:1px; text-transform:uppercase;
+    padding:.25rem .7rem; border-radius:20px;
+    font-family:'Orbitron',monospace;
+  }
+  .status-ok { background: rgba(34,197,94,0.15); color: var(--green); border:1px solid rgba(34,197,94,0.3); }
+  .status-no { background: rgba(230,57,70,0.15); color: var(--red); border:1px solid rgba(230,57,70,0.3); }
+  .status-now { background: rgba(244,163,0,0.15); color: var(--gold); border:1px solid rgba(244,163,0,0.3); }
+
+  /* ─── PROGRESS ─── */
+  .progress-wrap { background: var(--card); border:1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.8rem; }
+  .progress-bar-track { width:100%; height:10px; border-radius:6px; background: rgba(255,255,255,0.06); overflow:hidden; margin: .8rem 0 1.2rem; }
+  .progress-bar-fill { height:100%; border-radius:6px; background: linear-gradient(90deg, var(--accent), var(--gold)); }
+  .progress-steps { display:flex; flex-wrap:wrap; gap:.6rem; }
+  .progress-step { font-size:.75rem; padding:.3rem .8rem; border-radius:20px; font-family:'Orbitron',monospace; letter-spacing:.5px; }
+  .step-done { background: rgba(34,197,94,0.15); color: var(--green); border:1px solid rgba(34,197,94,0.3); }
+  .step-active { background: rgba(244,163,0,0.15); color: var(--gold); border:1px solid rgba(244,163,0,0.3); }
+  .step-todo { background: rgba(255,255,255,0.04); color: var(--muted); border:1px solid rgba(255,255,255,0.08); }
+
+  /* ─── DIARY ENTRIES ─── */
+  .diary-entry {
+    background: var(--card2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 1.4rem;
+  }
+  .diary-entry .de-meta { display:flex; align-items:center; gap:.8rem; margin-bottom:.8rem; flex-wrap:wrap; }
+  .diary-entry .de-date { font-family:'Orbitron',monospace; font-size:.7rem; color:var(--accent); letter-spacing:1px; text-transform:uppercase; }
+  .diary-entry .de-author { font-size:.78rem; color:var(--gold); font-weight:600; }
+  .diary-entry p { color: var(--text); font-size: .95rem; margin-bottom: .8rem; }
+  .diary-entry p:last-child { margin-bottom: 0; }
+  .diary-more { text-align:center; color:var(--muted); font-size:.85rem; padding: 1rem; border: 1px dashed rgba(255,255,255,0.1); border-radius: 10px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Sant Jordi <span>ROBOTICS</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Inici</a></li>
+    <li><a href="index.html#override">Override</a></li>
+    <li><a href="index.html#normes">Normes</a></li>
+    <li><a href="index.html#puntuacio">Puntuació</a></li>
+    <li><a href="index.html#palarobotica">Palarobòtica</a></li>
+    <li><a href="bloc.html" style="color:var(--accent);">Bloc</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="bloc-hero">
+  <p class="section-label">Bloc oficial de l'equip</p>
+  <h1>Diari VEX <span>4t d'ESO</span></h1>
+  <p>Escola Sant Jordi de Palafrugell — equip, historial de reptes des de 1r d'ESO, competicions i diari de classe del curs 2026-27 (VEX V5RC Override).</p>
+</header>
+
+<!-- EQUIP -->
+<section id="equip">
+  <div class="container">
+    <p class="section-label">Qui som</p>
+    <h2 class="section-title">L'<span>equip</span> d'aquest curs</h2>
+    <p class="section-desc">Som 4 persones i ens repartim tota la feina: la pàgina web, aquest bloc, el treball de recerca i investigació, el disseny i muntatge del robot, la programació i les competicions. Aquest curs la robòtica ha deixat de ser optativa: forma part del Treball de Recerca (Mestre Segrera), el projecte més important de 4t d'ESO.</p>
+
+    <div class="team-grid fade-in">
+      <div class="team-card"><div class="team-avatar">P</div><h4>Pau</h4><div class="role">Equip 4t ESO</div></div>
+      <div class="team-card"><div class="team-avatar">M</div><h4>Martina</h4><div class="role">Equip 4t ESO</div></div>
+      <div class="team-card"><div class="team-avatar">B</div><h4>Bryan</h4><div class="role">Equip 4t ESO</div></div>
+      <div class="team-card"><div class="team-avatar">A</div><h4>Alfons</h4><div class="role">Equip 4t ESO</div></div>
+    </div>
+
+    <p style="margin-top:1.5rem; color:var(--muted); font-size:.9rem;">L'equip ha anat canviant de membres cada curs, amb baixes i altes de companys, però portem des de 1r d'ESO construint robots i competint amb VEX de forma continuada, dins d'una escola amb llarga tradició en robòtica educativa.</p>
+  </div>
+</section>
+
+<!-- HISTORIAL DE REPTES -->
+<section class="overview-bg">
+  <div class="container">
+    <p class="section-label">Trajectòria</p>
+    <h2 class="section-title">Els nostres <span>reptes</span>, curs per curs</h2>
+    <p class="section-desc">Cada any hem afrontat un repte oficial diferent de VEX, amb un robot nou construït de zero.</p>
+
+    <div class="year-timeline fade-in">
+
+      <div class="year-card is-past">
+        <div class="yr">1r ESO · 2023-24</div>
+        <h3>VEX IQ — Full Volume</h3>
+        <p>Recollir blocs de tres colors (verds = 1 pt, violeta = 3 pts, vermells = 5 pts) i deixar-los a les cistelles de les cantonades, amb bonus per netejar la zona extra i per acabar el robot posicionat dins seu.</p>
+        <span class="year-status status-ok">✓ Competit — Girona i Andorra</span>
+      </div>
+
+      <div class="year-card is-past">
+        <div class="yr">2n ESO · 2024-25</div>
+        <h3>VEX IQ — Rapid Relay</h3>
+        <p>Encistellar pilotes verdes en aliança de 2+2 jugadors, desbloquejant porteries per multiplicar els punts de cada passada (fins a 12 punts amb les 4 porteries desbloquejades).</p>
+        <span class="year-status status-ok">✓ Competit — Girona (des del 3 de febrer de 2025)</span>
+      </div>
+
+      <div class="year-card is-past">
+        <div class="yr">3r ESO · 2025-26</div>
+        <h3>VEX V5RC — Push Back</h3>
+        <p>Apilar 88 blocs hexagonals en 4 Goals i controlar zones, en un camp de 12×12 peus amb 2 robots per aliança.</p>
+        <span class="year-status status-no">✕ No vam competir — robot inacabat</span>
+      </div>
+
+      <div class="year-card is-current">
+        <div class="yr">4t ESO · 2026-27 (curs actual)</div>
+        <h3>VEX V5RC — Override</h3>
+        <p>Apilar Pins i Tasses en Objectius, controlar els Toggles i dominar la zona central (Midfield) en els últims 10 segons del matx.</p>
+        <span class="year-status status-now">▶ En curs</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROGRÉS -->
+<section id="progres">
+  <div class="container">
+    <p class="section-label">Estat actual</p>
+    <h2 class="section-title">Progrés del <span>robot</span></h2>
+    <p class="section-desc">Actualitzat el 22 de setembre de 2026.</p>
+
+    <div class="progress-wrap fade-in">
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:35%;"></div></div>
+      <div class="progress-steps">
+        <span class="progress-step step-done">✓ Pista de pràctica</span>
+        <span class="progress-step step-done">✓ Base reaprofitada</span>
+        <span class="progress-step step-active">▶ Mecanisme de la pinça</span>
+        <span class="progress-step step-active">▶ Pilars i engranatges</span>
+        <span class="progress-step step-todo">Programació autònoma</span>
+        <span class="progress-step step-todo">Proves a pista</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETICIONS -->
+<section class="overview-bg">
+  <div class="container">
+    <p class="section-label">On competim</p>
+    <h2 class="section-title">Competicions i el <span>circuit VEX</span></h2>
+    <p class="section-desc">El calendari VEX funciona per nivells: torneigs classificatoris locals i comarcals, fases catalanes i estatals, i finalment el VEX Robotics World Championship. Classificar-se depèn del rànquing i també de premis especials com l'Excellence Award o el Design Award.</p>
+
+    <div class="rules-grid fade-in">
+      <div class="rule-card">
+        <div class="rule-icon ri-blue">📍</div>
+        <h4>Andorra</h4>
+        <ul><li>Torneig disputat a mitjan gener de 2024</li><li>La nostra primera sortida fora de l'estat espanyol</li></ul>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon ri-accent">🏟️</div>
+        <h4>Girona</h4>
+        <ul><li>Full Volume: competició del 3 de febrer de 2024</li><li>Rapid Relay: competició iniciada el 3 de febrer de 2025</li></ul>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon ri-gold">🏫</div>
+        <h4>Palarobòtica (Palafrugell)</h4>
+        <ul><li>Jornada STEAM local des de 2018, organitzada pel Grup de Treball de Programació i Robòtica de Palafrugell</li><li>Jornades, Tecnofestival, xerrades i exposicions entre els centres de Palafrugell</li></ul>
+      </div>
+    </div>
+
+    <p style="margin-top:2rem; color:var(--muted); font-size:.9rem;">Cada temporada ampliem el nostre recorregut competitiu, amb l'objectiu de consolidar-nos als classificatoris catalans i, en properes edicions, optar a fases estatals i internacionals.</p>
+  </div>
+</section>
+
+<!-- DIARI -->
+<section id="diari">
+  <div class="container">
+    <p class="section-label">Diari de classe</p>
+    <h2 class="section-title">Diari — Curs <span>2026-2027</span></h2>
+    <p class="section-desc">Anirem afegint una entrada nova cada dia de classe, escrita per un membre diferent de l'equip.</p>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">22 de setembre de 2026</span>
+        <span class="de-author">— Alfons</span>
+      </div>
+      <p>Avui és dia 22 de setembre, però no és el primer dia de feina: vam començar el curs passat, a finals de tercer, desmuntant el robot d'aquell any i vam deixar-ho aquí en espera del curs següent.</p>
+      <p>El primer dia de robòtica de 4t va ser el 15 de setembre. El professor ens ho va explicar tot: hauríem de començar muntant la pista de pràctica i el robot per avançar feina i tenir el robot fet com més aviat millor. Això implica saber manipular i identificar eines i material —fonamental per a un bon flux de treball—, organitzar-nos tant individualment com en equip, i tirar endavant el treball de recerca: buscar, dissenyar i analitzar robots, i preparar tècniques i plans de joc per tenir avantatge a les partides.</p>
+      <p>Aquell dia 15 vam acabar la pista de joc de l'aula i vam continuar amb el robot, que ja tenia la base començada del curs anterior, ajudant-nos de les instruccions. Avui, dia 22, seguim treballant en la part del mecanisme i l'estructura del robot: la pinça, que és clau perquè el robot pugui jugar sense problemes a la pista i sigui estable, versàtil i amb bon rendiment; i els pilars del robot, on van tots els engranatges que fan funcionar el mecanisme.</p>
+    </div>
+
+    <div class="diary-more">📓 El diari continuarà amb noves entrades a mesura que avanci el curs.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SANT JORDI ROBOTICS</div>
+  <p>Escola Sant Jordi · Palafrugell · Baix Empordà</p>
+  <p style="margin-top:.3rem;">4t d'ESO · VEX V5 Robotics Competition · Temporada 2026–27</p>
+  <p style="margin-top:1rem; font-size:.75rem;">
+    Bloc creat amb GitHub Pages ·
+    <a href="https://github.com/KCRooty/diari-Vex-V5-4t-ESO" target="_blank">github.com/KCRooty/diari-Vex-V5-4t-ESO</a>
+  </p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
