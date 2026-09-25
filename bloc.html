@@ -190,15 +190,16 @@
   <div class="container">
     <p class="section-label">Estat actual</p>
     <h2 class="section-title">Progrés del <span>robot</span></h2>
-    <p class="section-desc">Actualitzat el 22 de setembre de 2026.</p>
+    <p class="section-desc">Actualitzat el 23 de setembre de 2026.</p>
 
     <div class="progress-wrap fade-in">
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:35%;"></div></div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:50%;"></div></div>
       <div class="progress-steps">
         <span class="progress-step step-done">✓ Pista de pràctica</span>
         <span class="progress-step step-done">✓ Base reaprofitada</span>
-        <span class="progress-step step-active">▶ Mecanisme de la pinça</span>
-        <span class="progress-step step-active">▶ Pilars i engranatges</span>
+        <span class="progress-step step-done">✓ Pilars i engranatges</span>
+        <span class="progress-step step-active">▶ Sistema d'elevació de la pinça</span>
+        <span class="progress-step step-active">▶ Canvi de color dels panells</span>
         <span class="progress-step step-todo">Programació autònoma</span>
         <span class="progress-step step-todo">Proves a pista</span>
       </div>
@@ -241,6 +242,17 @@
     <p class="section-label">Diari de classe</p>
     <h2 class="section-title">Diari — Curs <span>2026-2027</span></h2>
     <p class="section-desc">Anirem afegint una entrada nova cada dia de classe, escrita per un membre diferent de l'equip.</p>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">23 de setembre de 2026</span>
+        <span class="de-author">— Bryan i Alfons</span>
+      </div>
+      <p>Avui, dia 23 de setembre, en Bryan i l'Alfons hem treballat en el muntatge d'una part clau del robot: el sistema d'elevació de la pinça combinat amb el mecanisme de canvi de color dels panells de la pista.</p>
+      <p>El primer que hem muntat ha estat una estructura formada per 4 columnes verticals, que és l'esquelet que subjecta i guia tot el sistema d'engranatges; gràcies a aquesta configuració, el moviment de pujada és estable i recte, sense que l'estructura es torci o es desnivelli. Dins de les columnes hi hem col·locat un conjunt d'engranatges connectats entre ells, la funció dels quals és transmetre el gir del motor al llarg de tota l'estructura, ajustant la força i la velocitat necessàries per moure la pinça amb precisió.</p>
+      <p>El gir generat pel motor passa a través dels engranatges i fa que la pinça pugi o baixi segons el sentit de gir: aquest és el mecanisme principal que ens permetrà agafar i deixar anar elements durant la partida.</p>
+      <p>El més interessant d'aquest muntatge és que hem aconseguit que, alhora que puja la pinça, una roda connectada al mateix sistema giri i canviï el color d'uns panells de la pista de joc; és a dir, amb un sol motor aconseguim dues accions simultànies: elevar la pinça i voltejar els panells. Aquest disseny és útil perquè, en sincronitzar els dos moviments amb el mateix sistema de transmissió, estalviem motors i simplifiquem la programació, ja que no cal controlar dos mecanismes per separat: activant un sol motor aconseguim l'efecte doble.</p>
+    </div>
 
     <div class="diary-entry fade-in">
       <div class="de-meta">
