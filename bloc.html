@@ -101,6 +101,20 @@
   .diary-entry .de-author { font-size:.78rem; color:var(--gold); font-weight:600; }
   .diary-entry p { color: var(--text); font-size: .95rem; margin-bottom: .8rem; }
   .diary-entry p:last-child { margin-bottom: 0; }
+  .diary-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: .8rem;
+    margin-top: 1.2rem;
+  }
+  .diary-photos figure { margin: 0; }
+  .diary-photos img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .diary-photos figcaption { font-size: .75rem; color: var(--muted); margin-top: .4rem; }
   .diary-more { text-align:center; color:var(--muted); font-size:.85rem; padding: 1rem; border: 1px dashed rgba(255,255,255,0.1); border-radius: 10px; }
 </style>
 </head>
@@ -190,16 +204,16 @@
   <div class="container">
     <p class="section-label">Estat actual</p>
     <h2 class="section-title">Progrés del <span>robot</span></h2>
-    <p class="section-desc">Actualitzat el 23 de setembre de 2026.</p>
+    <p class="section-desc">Actualitzat el 25 de setembre de 2026.</p>
 
     <div class="progress-wrap fade-in">
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:50%;"></div></div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:60%;"></div></div>
       <div class="progress-steps">
         <span class="progress-step step-done">✓ Pista de pràctica</span>
         <span class="progress-step step-done">✓ Base reaprofitada</span>
         <span class="progress-step step-done">✓ Pilars i engranatges</span>
-        <span class="progress-step step-active">▶ Sistema d'elevació de la pinça</span>
-        <span class="progress-step step-active">▶ Canvi de color dels panells</span>
+        <span class="progress-step step-done">✓ Peça del canvi de color enganxada a la base</span>
+        <span class="progress-step step-active">▶ Pinça unida al braç (versió provisional)</span>
         <span class="progress-step step-todo">Programació autònoma</span>
         <span class="progress-step step-todo">Proves a pista</span>
       </div>
@@ -245,6 +259,27 @@
 
     <div class="diary-entry fade-in">
       <div class="de-meta">
+        <span class="de-date">25 de setembre de 2026</span>
+        <span class="de-author">— Pau</span>
+      </div>
+      <p>Avui, divendres 25 de setembre, hem estat 2 hores més treballant el robot. Érem la Martina, que ha hagut de marxar a les 16 h, i jo, en Pau. Hem continuat el molt bon treball que van fer els nostres companys el dimecres: la idea d'avui ha sigut col·locar i enganxar a la base la peça que estan fent l'Alfons i en Bryan.</p>
+      <p>Només hem tingut un petit contratemps: en enganxar la peça, els forats no coincidien per la col·locació dels separadors als eixos de la part esquerra de la peça (el fragment en què havien estat treballant el dimecres). No ha sigut cap problema: hem reduït l'espai entre barra i barra traient algun separador dels eixos i ens hem assegurat que quedés perfectament alineada i completament recta a 90º. Després hem enganxat aquesta gran peça a la base.</p>
+      <p>Un cop acabada aquesta tasca, hem fet l'altra encomanada: unir la pinça amb el braç del robot, que de moment només són dues barres de 25 però que millorarà properament. No era una tasca senzilla, perquè la pinça no s'assemblava gens a la de les instruccions, però ens les hem hagut d'enginyar. Primer hem provat d'enganxar la pinça a una barra i unir-la amb gomes, posant dos eixos, fixadors i dues gomes, però no ha funcionat.</p>
+      <p>La Martina ha hagut de marxar i m'ha tocat pensar-hi jo sol. A l'aula també hi havia dos companys de 3r que estaven fent gairebé el mateix que nosaltres i tenien exactament el mateix problema, així que hem pensat la solució junts: posar una barra d'1x5 que connecti les dues barres del braç amb la pinça i que, a sobre, la mantingui horitzontal.</p>
+      <div class="diary-photos">
+        <figure>
+          <img src="img/diari/2026-09-25-base.png" alt="Peça del mecanisme enganxada i alineada a la base del robot">
+          <figcaption>La peça enganxada i alineada a la base</figcaption>
+        </figure>
+        <figure>
+          <img src="img/diari/2026-09-25-pinca.png" alt="Pinça unida al braç del robot amb una barra d'1x5">
+          <figcaption>La pinça unida al braç amb la barra d'1x5</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
         <span class="de-date">23 de setembre de 2026</span>
         <span class="de-author">— Bryan</span>
       </div>
@@ -262,6 +297,16 @@
       <p>Avui és dia 22 de setembre, però no és el primer dia de feina: vam començar el curs passat, a finals de tercer, desmuntant el robot d'aquell any i vam deixar-ho aquí en espera del curs següent.</p>
       <p>El primer dia de robòtica de 4t va ser el 15 de setembre. El professor ens ho va explicar tot: hauríem de començar muntant la pista de pràctica i el robot per avançar feina i tenir el robot fet com més aviat millor. Això implica saber manipular i identificar eines i material —fonamental per a un bon flux de treball—, organitzar-nos tant individualment com en equip, i tirar endavant el treball de recerca: buscar, dissenyar i analitzar robots, i preparar tècniques i plans de joc per tenir avantatge a les partides.</p>
       <p>Aquell dia 15 vam acabar la pista de joc de l'aula i vam continuar amb el robot, que ja tenia la base començada del curs anterior, ajudant-nos de les instruccions. Avui, dia 22, seguim treballant en la part del mecanisme i l'estructura del robot: la pinça, que és clau perquè el robot pugui jugar sense problemes a la pista i sigui estable, versàtil i amb bon rendiment; i els pilars del robot, on van tots els engranatges que fan funcionar el mecanisme.</p>
+    </div>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">20 de setembre de 2026</span>
+        <span class="de-author">— Bryan</span>
+      </div>
+      <p>Avui és dia 20 de setembre. Durant aquesta sessió de robòtica, la Martina i jo hem començat a muntar el nou disseny del robot, que vam decidir canviar ahir amb el profe Manel. L'objectiu és tenir un robot més avançat que ens permeti aconseguir una puntuació més alta a la pista.</p>
+      <p>Per això, amb l'ajuda del Manel, vam decidir redissenyar l'estructura perquè sigui més robusta i estable i, alhora, més versàtil.</p>
+      <p>Amb aquest nou disseny podrem afrontar més missions en una sola sortida, aprofitar millor el temps de la ronda i, en conseqüència, sumar més punts. Aprofitant l'experiència del muntatge anterior, mantenim la idea d'utilitzar un mateix motor per fer més d'una acció, perquè simplifica la programació i estalvia components.</p>
     </div>
 
     <div class="diary-more">📓 El diari continuarà amb noves entrades a mesura que avanci el curs.</div>
