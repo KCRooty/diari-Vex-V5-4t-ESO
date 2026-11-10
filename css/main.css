@@ -529,6 +529,58 @@ strong { color: var(--ink); font-weight: 600; }
 }
 .hero .deco { z-index: 1; opacity: .12; }
 
+/* ─── MENCIÓ D'HONOR ─── */
+.honor {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  padding: 0;
+  overflow: hidden;
+  border-color: #ecd08a;
+  box-shadow: 0 0 0 4px rgba(232,165,0,.12), var(--shadow);
+}
+.honor-img { position: relative; min-height: 100%; }
+.honor-img img { width: 100%; height: 100%; object-fit: cover; }
+.honor-img figcaption {
+  position: absolute;
+  left: 14px; bottom: 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #fff;
+  background: rgba(15,29,51,.72);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+.honor-body { padding: 32px; }
+.honor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #8a6100;
+  background: #fdf4dd;
+  border: 1px solid #ecd08a;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.honor-body h3 { font-size: 24px; letter-spacing: -.5px; margin-bottom: 10px; }
+.honor-body > p { color: var(--text); }
+.facts { list-style: none; margin: 20px 0; display: grid; gap: 10px; }
+.facts li { display: flex; gap: 12px; align-items: flex-start; font-size: 14.5px; }
+.facts li .ico { color: var(--brand); margin-top: 2px; }
+.facts li b { display: block; font-family: var(--mono); font-size: 11.5px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; }
+.honor-thanks {
+  border-left: 3px solid var(--gold);
+  padding: 4px 0 4px 14px;
+  font-style: italic;
+  color: var(--ink);
+}
+.honor-source { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.honor-mini { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.honor-mini img { width: 132px; height: 96px; object-fit: cover; border-radius: 12px; flex-shrink: 0; }
+
 /* ─── BANNER VEX ─── */
 .banner {
   display: grid;
@@ -586,6 +638,8 @@ strong { color: var(--ink); font-weight: 600; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-inner > :first-child { grid-column: 1 / -1; }
   .deco { display: none; }
+  .honor { grid-template-columns: 1fr; }
+  .honor-img img { aspect-ratio: 4 / 3; }
   .banner { grid-template-columns: 1fr; }
   .banner-text { padding: 32px 28px 0; }
   .banner-img img { -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%); mask-image: linear-gradient(180deg, transparent 0%, #000 30%); }
@@ -599,6 +653,8 @@ strong { color: var(--ink); font-weight: 600; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .grid-auto { grid-template-columns: repeat(2, 1fr); }
   .card { padding: 20px; }
+  .honor { padding: 0; }
+  .honor-body { padding: 22px; }
   .timeline::before { display: none; }
   .entry { grid-template-columns: 1fr; gap: 10px; }
   .date { position: static; display: flex; align-items: baseline; gap: 8px; text-align: left; padding: 8px 14px; width: max-content; }
