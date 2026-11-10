@@ -5,134 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bloc de l'equip – Robòtica VEX V5 – Escola Sant Jordi Palafrugell</title>
 <meta name="description" content="Bloc oficial de l'equip de robòtica VEX de l'Escola Sant Jordi de Palafrugell: equip, historial de reptes des de 1r d'ESO, competicions i diari de classe.">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
-<style>
-  /* ─── BLOC PAGE HEADER ─── */
-  .bloc-hero {
-    position: relative; z-index: 1;
-    padding: 8rem 2rem 3rem;
-    text-align: center;
-  }
-  .bloc-hero .section-label { justify-content:center; display:flex; }
-  .bloc-hero h1 {
-    font-family: 'Orbitron', monospace;
-    font-size: clamp(2.2rem, 6vw, 3.5rem);
-    font-weight: 900;
-    margin: .5rem 0 1rem;
-  }
-  .bloc-hero h1 span { color: var(--accent); }
-  .bloc-hero p { color: var(--muted); max-width: 620px; margin: 0 auto; }
-
-  /* ─── TEAM ─── */
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.2rem;
-  }
-  .team-card {
-    background: var(--card2);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 12px;
-    padding: 1.5rem 1.2rem;
-    text-align: center;
-    transition: transform .2s, border-color .2s;
-  }
-  .team-card:hover { transform: translateY(-3px); border-color: rgba(0,212,255,0.3); }
-  .team-avatar {
-    width: 56px; height: 56px;
-    margin: 0 auto .8rem;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--blue));
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Orbitron', monospace;
-    font-weight: 900;
-    font-size: 1.2rem;
-    color: var(--darker);
-  }
-  .team-card h4 { font-size: 1rem; margin-bottom: .3rem; }
-  .team-card .role { font-size: .75rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; }
-
-  /* ─── YEAR TIMELINE (reptes) ─── */
-  .year-timeline { display: flex; flex-direction: column; gap: 1.5rem; }
-  .year-card {
-    background: var(--card);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-left: 3px solid var(--accent);
-    border-radius: 10px;
-    padding: 1.5rem 1.8rem;
-  }
-  .year-card.is-past { border-left-color: var(--muted); opacity: .88; }
-  .year-card.is-current { border-left-color: var(--gold); box-shadow: 0 0 30px rgba(244,163,0,0.08); }
-  .year-card .yr { font-family:'Orbitron',monospace; font-size:.7rem; letter-spacing:2px; color:var(--accent); text-transform:uppercase; margin-bottom:.3rem; }
-  .year-card.is-current .yr { color: var(--gold); }
-  .year-card h3 { font-size: 1.15rem; margin-bottom: .5rem; }
-  .year-card p { color: var(--muted); font-size: .92rem; }
-  .year-video {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    margin-top: 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-  .year-video iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-  .year-status {
-    display:inline-block; margin-top:.8rem;
-    font-size:.7rem; letter-spacing:1px; text-transform:uppercase;
-    padding:.25rem .7rem; border-radius:20px;
-    font-family:'Orbitron',monospace;
-  }
-  .status-ok { background: rgba(34,197,94,0.15); color: var(--green); border:1px solid rgba(34,197,94,0.3); }
-  .status-no { background: rgba(230,57,70,0.15); color: var(--red); border:1px solid rgba(230,57,70,0.3); }
-  .status-now { background: rgba(244,163,0,0.15); color: var(--gold); border:1px solid rgba(244,163,0,0.3); }
-
-  /* ─── PROGRESS ─── */
-  .progress-wrap { background: var(--card); border:1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.8rem; }
-  .progress-bar-track { width:100%; height:10px; border-radius:6px; background: rgba(255,255,255,0.06); overflow:hidden; margin: .8rem 0 1.2rem; }
-  .progress-bar-fill { height:100%; border-radius:6px; background: linear-gradient(90deg, var(--accent), var(--gold)); }
-  .progress-steps { display:flex; flex-wrap:wrap; gap:.6rem; }
-  .progress-step { font-size:.75rem; padding:.3rem .8rem; border-radius:20px; font-family:'Orbitron',monospace; letter-spacing:.5px; }
-  .step-done { background: rgba(34,197,94,0.15); color: var(--green); border:1px solid rgba(34,197,94,0.3); }
-  .step-active { background: rgba(244,163,0,0.15); color: var(--gold); border:1px solid rgba(244,163,0,0.3); }
-  .step-todo { background: rgba(255,255,255,0.04); color: var(--muted); border:1px solid rgba(255,255,255,0.08); }
-
-  /* ─── DIARY ENTRIES ─── */
-  .diary-entry {
-    background: var(--card2);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 12px;
-    padding: 1.6rem 1.8rem;
-    margin-bottom: 1.4rem;
-  }
-  .diary-entry .de-meta { display:flex; align-items:center; gap:.8rem; margin-bottom:.8rem; flex-wrap:wrap; }
-  .diary-entry .de-date { font-family:'Orbitron',monospace; font-size:.7rem; color:var(--accent); letter-spacing:1px; text-transform:uppercase; }
-  .diary-entry .de-author { font-size:.78rem; color:var(--gold); font-weight:600; }
-  .diary-entry p { color: var(--text); font-size: .95rem; margin-bottom: .8rem; }
-  .diary-entry p:last-child { margin-bottom: 0; }
-  .diary-photos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: .8rem;
-    margin-top: 1.2rem;
-  }
-  .diary-photos figure { margin: 0; }
-  .diary-photos img {
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-  .diary-photos figcaption { font-size: .75rem; color: var(--muted); margin-top: .4rem; }
-  .diary-more { text-align:center; color:var(--muted); font-size:.85rem; padding: 1rem; border: 1px dashed rgba(255,255,255,0.1); border-radius: 10px; }
-</style>
 </head>
 <body>
 
@@ -145,7 +19,7 @@
     <li><a href="index.html#normes">Normes</a></li>
     <li><a href="index.html#puntuacio">Puntuació</a></li>
     <li><a href="index.html#palarobotica">Palarobòtica</a></li>
-    <li><a href="bloc.html" style="color:var(--accent);">Bloc</a></li>
+    <li><a href="bloc.html" class="active">Bloc</a></li>
   </ul>
 </nav>
 
@@ -232,18 +106,20 @@
   <div class="container">
     <p class="section-label">Estat actual</p>
     <h2 class="section-title">Progrés del <span>robot</span></h2>
-    <p class="section-desc">Actualitzat el 20 d'octubre de 2026.</p>
+    <p class="section-desc">Actualitzat el 6 de novembre de 2026.</p>
 
     <div class="progress-wrap fade-in">
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:75%;"></div></div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:82%;"></div></div>
       <div class="progress-steps">
         <span class="progress-step step-done">✓ Pista de pràctica</span>
         <span class="progress-step step-done">✓ Base reaprofitada</span>
         <span class="progress-step step-done">✓ Pilars i engranatges</span>
         <span class="progress-step step-done">✓ Peça del canvi de color enganxada a la base</span>
         <span class="progress-step step-done">✓ Barra frontal i patins del robot</span>
-        <span class="progress-step step-active">▶ Pinça (garres fetes, ajustant obertura i tancament)</span>
-        <span class="progress-step step-active">▶ Mecanisme d'engranatges del braç</span>
+        <span class="progress-step step-done">✓ Base reforçada</span>
+        <span class="progress-step step-done">✓ Pinça giratòria acabada</span>
+        <span class="progress-step step-active">▶ Estructura d'ascens (segona part)</span>
+        <span class="progress-step step-active">▶ Mecanisme del braç</span>
         <span class="progress-step step-todo">Programació autònoma</span>
         <span class="progress-step step-todo">Proves a pista</span>
       </div>
@@ -286,6 +162,80 @@
     <p class="section-label">Diari de classe</p>
     <h2 class="section-title">Diari — Curs <span>2026-2027</span></h2>
     <p class="section-desc">Anirem afegint una entrada nova cada dia de classe, escrita per un membre diferent de l'equip.</p>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">6 de novembre de 2026</span>
+        <span class="de-author">— Pau</span>
+      </div>
+      <p>Avui hem intentat col·locar la peça del mecanisme del braç, però ens hem adonat que les dues barres verticals estaven col·locades al mig, cosa que feia que aquestes peces quedessin massa endavant. Les hem tirat al màxim enrere, pràcticament a la part de darrere de tot, i per fer-ho hem hagut de treure les rodes dels patins, perquè molestaven massa.</p>
+      <p>També hem avançat amb les barres de davant, que ens facilitaran col·locar-nos a la torre de la pista.</p>
+    </div>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">4 de novembre de 2026</span>
+        <span class="de-author">— Alfons</span>
+      </div>
+      <p>Avui he modificat la peça del braç que la Martina va fer l'últim dia: per un problema de mides, l'he tallat i he fet la peça més curta per tenir més espai, però encara no l'he acabat.</p>
+      <p>La pinça ja està finalment acabada, i en Bryan s'ha encarregat de fer una altra part que també formarà part del braç.</p>
+    </div>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">3 de novembre de 2026</span>
+        <span class="de-author">— Martina</span>
+      </div>
+      <p>Avui hem acabat de fer la pinça giratòria i hem arreglat algunes coses del robot, com la part de davant: a la part que s'encaixa a les plataformes li hem posat dues peces perquè encaixi millor i el robot no es trenqui.</p>
+      <p>També hem acabat la primera part de l'estructura que puja cap amunt i hem estat mirant com començar la segona part de l'estructura.</p>
+    </div>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">28 d'octubre de 2026</span>
+        <span class="de-author">— Bryan</span>
+      </div>
+      <p>Avui hem treballat tres membres de l'equip: la Martina, l'Alfons i jo, en Bryan.</p>
+      <p>Hem treballat en el reforç de la base del robot, afegint-hi millores perquè pugui aguantar millor el pes de les diferents peces i els moviments que haurà de fer. També hem reforçat l'estructura per evitar possibles problemes d'estabilitat i aconseguir que totes les parts quedin ben subjectes.</p>
+      <p>A més, hem estat treballant en el mecanisme dels engranatges que permeten aixecar la pinça. Ara estem millorant aquest sistema perquè el moviment sigui més suau, precís i eficaç, i encara estem fent proves i ajustaments perquè la pinça pugui pujar i baixar correctament.</p>
+      <div class="diary-photos">
+        <figure>
+          <img src="img/diari/2026-10-28-estructura.jpg" alt="Base del robot reforçada amb l'estructura vertical i el cervell V5" loading="lazy">
+          <figcaption>La base reforçada amb l'estructura</figcaption>
+        </figure>
+        <figure>
+          <img src="img/diari/2026-10-28-pinca.jpg" alt="Mecanisme d'engranatges per aixecar la pinça amb el motor" loading="lazy">
+          <figcaption>El mecanisme d'engranatges que aixeca la pinça</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">27 d'octubre de 2026</span>
+        <span class="de-author">— Bryan</span>
+      </div>
+      <p>Avui hem treballat tot l'equip junt: la Martina, en Manel (el professor), en Pau, l'Alfons i jo, en Bryan. Ens hem centrat a continuar millorant la base del robot i la pinça. Hem revisat els moviments de la pinça perquè pugui obrir-se i tancar-se, girar i agafar les peces de joc amb més facilitat. També hem comentat alguns canvis que podem fer per millorar l'estabilitat i la mobilitat del robot.</p>
+      <p>Amb l'ajuda del professor hem anat revisant les idees i les possibles solucions als problemes que han anat apareixent durant la construcció. D'aquesta manera hem pogut compartir idees, repartir-nos les tasques i avançar conjuntament en el projecte.</p>
+      <div class="diary-photos">
+        <figure>
+          <img src="img/diari/2026-10-27-base.jpg" alt="Treballant a la base del robot amb les rodes omnidireccionals" loading="lazy">
+          <figcaption>Treballant a la base del robot</figcaption>
+        </figure>
+        <figure>
+          <img src="img/diari/2026-10-27-pinca.jpg" alt="La pinça amb els engranatges verds i les gomes taronja" loading="lazy">
+          <figcaption>La pinça, revisant com obre, tanca i gira</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="diary-entry fade-in">
+      <div class="de-meta">
+        <span class="de-date">23 d'octubre de 2026</span>
+        <span class="de-author">— Pau</span>
+      </div>
+      <p>Avui és divendres i l'Alfons ha fet 2 hores: ha vingut a les 15 h. La Martina ha avançat el mecanisme d'ascens del robot (el mecanisme que fa guanyar alçada al robot). Mentrestant, l'Alfons ha volgut donar més mobilitat a la pinça, concretament a les arpes.</p>
+    </div>
 
     <div class="diary-entry fade-in">
       <div class="de-meta">
