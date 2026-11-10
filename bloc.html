@@ -3,345 +3,382 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bloc de l'equip – Robòtica VEX V5 – Escola Sant Jordi Palafrugell</title>
-<meta name="description" content="Bloc oficial de l'equip de robòtica VEX de l'Escola Sant Jordi de Palafrugell: equip, historial de reptes des de 1r d'ESO, competicions i diari de classe.">
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<title>Diari de l'equip – Robòtica VEX V5 – Escola Sant Jordi Palafrugell</title>
+<meta name="description" content="Diari de l'equip de robòtica VEX de l'Escola Sant Jordi de Palafrugell: equip, reptes des de 1r d'ESO, progrés del robot, competicions i diari de classe.">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Sant Jordi <span>ROBOTICS</span></div>
-  <ul class="nav-links">
-    <li><a href="index.html">Inici</a></li>
-    <li><a href="index.html#override">Override</a></li>
-    <li><a href="index.html#normes">Normes</a></li>
-    <li><a href="index.html#puntuacio">Puntuació</a></li>
-    <li><a href="index.html#palarobotica">Palarobòtica</a></li>
-    <li><a href="bloc.html" class="active">Bloc</a></li>
-  </ul>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="img/logo.svg" alt="">
+      <span class="brand-text"><b>Sant Jordi</b><small>Robotics</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inici</a></li>
+      <li><a href="#equip">Equip</a></li>
+      <li><a href="#reptes">Reptes</a></li>
+      <li><a href="#progres">Progrés</a></li>
+      <li><a href="#competicions">Competicions</a></li>
+      <li><a href="#diari" class="nav-cta">Diari</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- HERO -->
-<header class="bloc-hero">
-  <p class="section-label">Bloc oficial de l'equip</p>
-  <h1>Diari VEX <span>4t d'ESO</span></h1>
-  <p>Escola Sant Jordi de Palafrugell — equip, historial de reptes des de 1r d'ESO, competicions i diari de classe del curs 2026-27 (VEX V5RC Override).</p>
+<header class="hero page-hero">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker"><span class="live"></span>Curs 2026–27 · VEX V5RC Override</div>
+      <h1>Diari VEX <span>4t d'ESO</span></h1>
+      <p class="hero-sub">Escola Sant Jordi de Palafrugell: l'equip, els reptes que hem fet des de 1r d'ESO, les competicions i el diari de classe del robot d'enguany.</p>
+      <div class="meta-row">
+        <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-users"/></svg><b>4</b><span>membres</span></div>
+        <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-trophy"/></svg><b>4</b><span>temporades</span></div>
+        <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-book"/></svg><b>13</b><span>entrades</span></div>
+        <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-bot"/></svg><b>82%</b><span>robot</span></div>
+      </div>
+    </div>
+  </div>
 </header>
 
 <!-- EQUIP -->
-<section id="equip">
+<section class="section" id="equip">
   <div class="container">
-    <p class="section-label">Qui som</p>
-    <h2 class="section-title">L'<span>equip</span> d'aquest curs</h2>
-    <p class="section-desc">Som 4 persones i ens repartim tota la feina: la pàgina web, aquest bloc, el treball de recerca i investigació, el disseny i muntatge del robot, la programació i les competicions. Aquest curs la robòtica ha deixat de ser optativa: forma part del Treball de Recerca (Mestre Segrera), el projecte més important de 4t d'ESO.</p>
-
-    <div class="team-grid fade-in">
-      <div class="team-card"><div class="team-avatar">P</div><h4>Pau</h4><div class="role">Equip 4t ESO</div></div>
-      <div class="team-card"><div class="team-avatar">M</div><h4>Martina</h4><div class="role">Equip 4t ESO</div></div>
-      <div class="team-card"><div class="team-avatar">B</div><h4>Bryan</h4><div class="role">Equip 4t ESO</div></div>
-      <div class="team-card"><div class="team-avatar">A</div><h4>Alfons</h4><div class="role">Equip 4t ESO</div></div>
+    <div class="section-head">
+      <div class="eyebrow"><span class="num">01</span>/ Qui som</div>
+      <h2>L'<span>equip</span> d'aquest curs</h2>
     </div>
 
-    <p style="margin-top:1.5rem; color:var(--muted); font-size:.9rem;">L'equip ha anat canviant de membres cada curs, amb baixes i altes de companys, però portem des de 1r d'ESO construint robots i competint amb VEX de forma continuada, dins d'una escola amb llarga tradició en robòtica educativa.</p>
+    <div class="grid grid-4 fade-in">
+      <div class="card member"><div class="avatar lg av-pau">P</div><h3>Pau</h3><span>equip_4t_eso</span></div>
+      <div class="card member"><div class="avatar lg av-martina">M</div><h3>Martina</h3><span>equip_4t_eso</span></div>
+      <div class="card member"><div class="avatar lg av-bryan">B</div><h3>Bryan</h3><span>equip_4t_eso</span></div>
+      <div class="card member"><div class="avatar lg av-alfons">A</div><h3>Alfons</h3><span>equip_4t_eso</span></div>
+    </div>
+
+    <div class="grid grid-2 mt fade-in">
+      <div class="card">
+        <div class="card-head"><div class="icon-tile"><svg class="ico"><use href="img/icons.svg#i-wrench"/></svg></div><h3>Com treballem</h3></div>
+        <p>Som 4 persones i ens repartim tota la feina: la pàgina web, aquest bloc, el treball de recerca i investigació, el disseny i muntatge del robot, la programació i les competicions.</p>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="icon-tile gold"><svg class="ico"><use href="img/icons.svg#i-school"/></svg></div><h3>Robòtica com a Treball de Recerca</h3></div>
+        <p>Aquest curs la robòtica ha deixat de ser optativa: forma part del Treball de Recerca (Mestre Segrera), el projecte més important de 4t d'ESO. L'equip ha anat canviant de membres, però portem des de 1r d'ESO construint robots i competint amb VEX.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- HISTORIAL DE REPTES -->
-<section class="overview-bg">
+<!-- REPTES -->
+<section class="section alt" id="reptes">
   <div class="container">
-    <p class="section-label">Trajectòria</p>
-    <h2 class="section-title">Els nostres <span>reptes</span>, curs per curs</h2>
-    <p class="section-desc">Cada any hem afrontat un repte oficial diferent de VEX, amb un robot nou construït de zero.</p>
+    <div class="section-head">
+      <div class="eyebrow"><span class="num">02</span>/ Trajectòria</div>
+      <h2>Els nostres <span>reptes</span>, curs per curs</h2>
+      <p>Cada any hem afrontat un repte oficial diferent de VEX, amb un robot nou construït de zero.</p>
+    </div>
 
-    <div class="year-timeline fade-in">
-
-      <div class="year-card is-past">
-        <div class="yr">1r ESO · 2023-24</div>
+    <div class="grid grid-2 fade-in">
+      <article class="card season">
+        <div class="season-top">
+          <span class="yr">1r ESO · 2023–24</span>
+          <span class="status ok"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Competit · Girona i Andorra</span>
+        </div>
         <h3>VEX IQ — Full Volume</h3>
         <p>Recollir blocs de tres colors (verds = 1 pt, violeta = 3 pts, vermells = 5 pts) i deixar-los a les cistelles de les cantonades, amb bonus per netejar la zona extra i per acabar el robot posicionat dins seu.</p>
-        <div class="year-video">
-          <iframe src="https://www.youtube-nocookie.com/embed/100tfTCiVmc" title="VEX IQ Full Volume" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <span class="year-status status-ok">✓ Competit — Girona i Andorra</span>
-      </div>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/100tfTCiVmc" title="VEX IQ Full Volume" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </article>
 
-      <div class="year-card is-past">
-        <div class="yr">2n ESO · 2024-25</div>
+      <article class="card season">
+        <div class="season-top">
+          <span class="yr">2n ESO · 2024–25</span>
+          <span class="status ok"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Competit · Girona</span>
+        </div>
         <h3>VEX IQ — Rapid Relay</h3>
-        <p>Encistellar pilotes verdes en aliança de 2+2 jugadors, desbloquejant porteries per multiplicar els punts de cada passada (fins a 12 punts amb les 4 porteries desbloquejades).</p>
-        <div class="year-video">
-          <iframe src="https://www.youtube-nocookie.com/embed/aa0B7kNHpg8" title="VEX IQ Rapid Relay" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <span class="year-status status-ok">✓ Competit — Girona (des del 3 de febrer de 2025)</span>
-      </div>
+        <p>Encistellar pilotes verdes en aliança de 2+2 jugadors, desbloquejant porteries per multiplicar els punts de cada passada (fins a 12 punts amb les 4 porteries desbloquejades). Competició a Girona des del 3 de febrer de 2025.</p>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/aa0B7kNHpg8" title="VEX IQ Rapid Relay" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </article>
 
-      <div class="year-card is-past">
-        <div class="yr">3r ESO · 2025-26</div>
+      <article class="card season">
+        <div class="season-top">
+          <span class="yr">3r ESO · 2025–26</span>
+          <span class="status no"><svg class="ico"><use href="img/icons.svg#i-x"/></svg>Robot inacabat</span>
+        </div>
         <h3>VEX V5RC — Push Back</h3>
-        <p>Apilar 88 blocs hexagonals en 4 Goals i controlar zones, en un camp de 12×12 peus amb 2 robots per aliança.</p>
-        <div class="year-video">
-          <iframe src="https://www.youtube-nocookie.com/embed/ocmONiVun9M" title="VEX V5RC Push Back" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <span class="year-status status-no">✕ No vam competir — robot inacabat</span>
-      </div>
+        <p>Apilar 88 blocs hexagonals en 4 Goals i controlar zones, en un camp de 12×12 peus amb 2 robots per aliança. Aquell curs no vam arribar a competir.</p>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ocmONiVun9M" title="VEX V5RC Push Back" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </article>
 
-      <div class="year-card is-current">
-        <div class="yr">4t ESO · 2026-27 (curs actual)</div>
+      <article class="card season current">
+        <div class="season-top">
+          <span class="yr">4t ESO · 2026–27 · actual</span>
+          <span class="status now"><svg class="ico"><use href="img/icons.svg#i-clock"/></svg>En curs</span>
+        </div>
         <h3>VEX V5RC — Override</h3>
-        <p>Apilar Pins i Tasses en Objectius, controlar els Toggles i dominar la zona central (Midfield) en els últims 10 segons del matx.</p>
-        <div class="year-video">
-          <iframe src="https://www.youtube-nocookie.com/embed/68NxYIAzbkY" title="VEX V5RC Override" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <span class="year-status status-now">▶ En curs</span>
-      </div>
-
+        <p>Apilar Pins i Tasses en Objectius, controlar els Toggles i dominar la zona central (Midfield) en els últims 10 segons del match.</p>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/68NxYIAzbkY" title="VEX V5RC Override" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- PROGRÉS -->
-<section id="progres">
+<section class="section" id="progres">
   <div class="container">
-    <p class="section-label">Estat actual</p>
-    <h2 class="section-title">Progrés del <span>robot</span></h2>
-    <p class="section-desc">Actualitzat el 6 de novembre de 2026.</p>
+    <div class="section-head">
+      <div class="eyebrow"><span class="num">03</span>/ Estat actual</div>
+      <h2>Progrés del <span>robot</span></h2>
+    </div>
 
-    <div class="progress-wrap fade-in">
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:82%;"></div></div>
-      <div class="progress-steps">
-        <span class="progress-step step-done">✓ Pista de pràctica</span>
-        <span class="progress-step step-done">✓ Base reaprofitada</span>
-        <span class="progress-step step-done">✓ Pilars i engranatges</span>
-        <span class="progress-step step-done">✓ Peça del canvi de color enganxada a la base</span>
-        <span class="progress-step step-done">✓ Barra frontal i patins del robot</span>
-        <span class="progress-step step-done">✓ Base reforçada</span>
-        <span class="progress-step step-done">✓ Pinça giratòria acabada</span>
-        <span class="progress-step step-active">▶ Estructura d'ascens (segona part)</span>
-        <span class="progress-step step-active">▶ Mecanisme del braç</span>
-        <span class="progress-step step-todo">Programació autònoma</span>
-        <span class="progress-step step-todo">Proves a pista</span>
+    <div class="card fade-in">
+      <div class="progress-head">
+        <div class="card-head" style="margin:0"><div class="icon-tile"><svg class="ico"><use href="img/icons.svg#i-bot"/></svg></div><div><h3>Robot Override</h3><p style="font-size:13.5px;color:var(--muted)">Actualitzat el 6 de novembre de 2026</p></div></div>
+        <b>82%</b>
       </div>
+      <div class="bar"><i style="width:82%"></i></div>
+      <ul class="steps">
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Pista de pràctica</li>
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Base reaprofitada</li>
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Pilars i engranatges</li>
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Peça del canvi de color a la base</li>
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Barra frontal i patins</li>
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Base reforçada</li>
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Pinça giratòria acabada</li>
+        <li class="now"><svg class="ico"><use href="img/icons.svg#i-dot"/></svg>Estructura d'ascens (2a part)</li>
+        <li class="now"><svg class="ico"><use href="img/icons.svg#i-dot"/></svg>Mecanisme del braç</li>
+        <li class="todo"><svg class="ico"><use href="img/icons.svg#i-circle"/></svg>Programació autònoma</li>
+        <li class="todo"><svg class="ico"><use href="img/icons.svg#i-circle"/></svg>Proves a pista</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- COMPETICIONS -->
-<section class="overview-bg">
+<section class="section alt" id="competicions">
   <div class="container">
-    <p class="section-label">On competim</p>
-    <h2 class="section-title">Competicions i el <span>circuit VEX</span></h2>
-    <p class="section-desc">El calendari VEX funciona per nivells: torneigs classificatoris locals i comarcals, fases catalanes i estatals, i finalment el VEX Robotics World Championship. Classificar-se depèn del rànquing i també de premis especials com l'Excellence Award o el Design Award.</p>
+    <div class="section-head">
+      <div class="eyebrow"><span class="num">04</span>/ On competim</div>
+      <h2>Competicions i el <span>circuit VEX</span></h2>
+      <p>El calendari VEX funciona per nivells: torneigs classificatoris locals, fases catalanes i estatals, i finalment el VEX Robotics World Championship.</p>
+    </div>
 
-    <div class="rules-grid fade-in">
-      <div class="rule-card">
-        <div class="rule-icon ri-blue">📍</div>
-        <h4>Andorra</h4>
-        <ul><li>Torneig disputat a mitjan gener de 2024</li><li>La nostra primera sortida fora de l'estat espanyol</li></ul>
+    <div class="grid grid-3 fade-in">
+      <div class="card">
+        <div class="card-head"><div class="icon-tile"><svg class="ico"><use href="img/icons.svg#i-pin"/></svg></div><h3>Andorra</h3></div>
+        <ul class="list"><li>Torneig disputat a mitjan gener de 2024</li><li>La nostra primera sortida fora de l'estat espanyol</li></ul>
       </div>
-      <div class="rule-card">
-        <div class="rule-icon ri-accent">🏟️</div>
-        <h4>Girona</h4>
-        <ul><li>Full Volume: competició del 3 de febrer de 2024</li><li>Rapid Relay: competició iniciada el 3 de febrer de 2025</li></ul>
+      <div class="card">
+        <div class="card-head"><div class="icon-tile"><svg class="ico"><use href="img/icons.svg#i-trophy"/></svg></div><h3>Girona</h3></div>
+        <ul class="list"><li>Full Volume: competició del 3 de febrer de 2024</li><li>Rapid Relay: competició iniciada el 3 de febrer de 2025</li></ul>
       </div>
-      <div class="rule-card">
-        <div class="rule-icon ri-gold">🏫</div>
-        <h4>Palarobòtica (Palafrugell)</h4>
-        <ul><li>Jornada STEAM local des de 2018, organitzada pel Grup de Treball de Programació i Robòtica de Palafrugell</li><li>Jornades, Tecnofestival, xerrades i exposicions entre els centres de Palafrugell</li></ul>
+      <div class="card">
+        <div class="card-head"><div class="icon-tile gold"><svg class="ico"><use href="img/icons.svg#i-sparkles"/></svg></div><h3>Palarobòtica</h3></div>
+        <ul class="list"><li>Jornada STEAM local de Palafrugell des de 2018</li><li>Tecnofestival, xerrades i exposicions entre els centres</li></ul>
       </div>
     </div>
 
-    <p style="margin-top:2rem; color:var(--muted); font-size:.9rem;">Cada temporada ampliem el nostre recorregut competitiu, amb l'objectiu de consolidar-nos als classificatoris catalans i, en properes edicions, optar a fases estatals i internacionals.</p>
+    <div class="grid grid-2 mt fade-in">
+      <div class="card callout">
+        <div class="icon-tile"><svg class="ico"><use href="img/icons.svg#i-award"/></svg></div>
+        <div><h3>Com es classifica</h3><p>Depèn del rànquing als torneigs i també de premis especials com l'Excellence Award o el Design Award.</p></div>
+      </div>
+      <div class="card callout">
+        <div class="icon-tile"><svg class="ico"><use href="img/icons.svg#i-route"/></svg></div>
+        <div><h3>El nostre objectiu</h3><p>Ampliar el recorregut cada temporada: consolidar-nos als classificatoris catalans i optar a fases estatals i internacionals.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- DIARI -->
-<section id="diari">
+<section class="section" id="diari">
   <div class="container">
-    <p class="section-label">Diari de classe</p>
-    <h2 class="section-title">Diari — Curs <span>2026-2027</span></h2>
-    <p class="section-desc">Anirem afegint una entrada nova cada dia de classe, escrita per un membre diferent de l'equip.</p>
-
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">6 de novembre de 2026</span>
-        <span class="de-author">— Pau</span>
-      </div>
-      <p>Avui hem intentat col·locar la peça del mecanisme del braç, però ens hem adonat que les dues barres verticals estaven col·locades al mig, cosa que feia que aquestes peces quedessin massa endavant. Les hem tirat al màxim enrere, pràcticament a la part de darrere de tot, i per fer-ho hem hagut de treure les rodes dels patins, perquè molestaven massa.</p>
-      <p>També hem avançat amb les barres de davant, que ens facilitaran col·locar-nos a la torre de la pista.</p>
+    <div class="section-head">
+      <div class="eyebrow"><span class="num">05</span>/ Diari de classe</div>
+      <h2>Diari · curs <span>2026–27</span></h2>
+      <p>Cada dia de classe, un membre diferent de l'equip escriu què hem fet. La més recent, a dalt.</p>
     </div>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">4 de novembre de 2026</span>
-        <span class="de-author">— Alfons</span>
-      </div>
-      <p>Avui he modificat la peça del braç que la Martina va fer l'últim dia: per un problema de mides, l'he tallat i he fet la peça més curta per tenir més espai, però encara no l'he acabat.</p>
-      <p>La pinça ja està finalment acabada, i en Bryan s'ha encarregat de fer una altra part que també formarà part del braç.</p>
-    </div>
+    <div class="timeline">
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">3 de novembre de 2026</span>
-        <span class="de-author">— Martina</span>
-      </div>
-      <p>Avui hem acabat de fer la pinça giratòria i hem arreglat algunes coses del robot, com la part de davant: a la part que s'encaixa a les plataformes li hem posat dues peces perquè encaixi millor i el robot no es trenqui.</p>
-      <p>També hem acabat la primera part de l'estructura que puja cap amunt i hem estat mirant com començar la segona part de l'estructura.</p>
-    </div>
+      <article class="entry fade-in" id="d-2026-11-06">
+        <div class="date"><b>06</b><span>nov.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-pau">P</span>Pau</div><span class="when">divendres</span></div>
+          <p>Avui hem intentat col·locar la peça del mecanisme del braç, però ens hem adonat que les dues barres verticals estaven col·locades al mig, cosa que feia que aquestes peces quedessin massa endavant. Les hem tirat al màxim enrere, pràcticament a la part de darrere de tot, i per fer-ho hem hagut de treure les rodes dels patins, perquè molestaven massa.</p>
+          <p>També hem avançat amb les barres de davant, que ens facilitaran col·locar-nos a la torre de la pista.</p>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">28 d'octubre de 2026</span>
-        <span class="de-author">— Bryan</span>
-      </div>
-      <p>Avui hem treballat tres membres de l'equip: la Martina, l'Alfons i jo, en Bryan.</p>
-      <p>Hem treballat en el reforç de la base del robot, afegint-hi millores perquè pugui aguantar millor el pes de les diferents peces i els moviments que haurà de fer. També hem reforçat l'estructura per evitar possibles problemes d'estabilitat i aconseguir que totes les parts quedin ben subjectes.</p>
-      <p>A més, hem estat treballant en el mecanisme dels engranatges que permeten aixecar la pinça. Ara estem millorant aquest sistema perquè el moviment sigui més suau, precís i eficaç, i encara estem fent proves i ajustaments perquè la pinça pugui pujar i baixar correctament.</p>
-      <div class="diary-photos">
-        <figure>
-          <img src="img/diari/2026-10-28-estructura.jpg" alt="Base del robot reforçada amb l'estructura vertical i el cervell V5" loading="lazy">
-          <figcaption>La base reforçada amb l'estructura</figcaption>
-        </figure>
-        <figure>
-          <img src="img/diari/2026-10-28-pinca.jpg" alt="Mecanisme d'engranatges per aixecar la pinça amb el motor" loading="lazy">
-          <figcaption>El mecanisme d'engranatges que aixeca la pinça</figcaption>
-        </figure>
-      </div>
-    </div>
+      <article class="entry fade-in" id="d-2026-11-04">
+        <div class="date"><b>04</b><span>nov.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-alfons">A</span>Alfons</div><span class="when">dimecres</span></div>
+          <p>Avui he modificat la peça del braç que la Martina va fer l'últim dia: per un problema de mides, l'he tallat i he fet la peça més curta per tenir més espai, però encara no l'he acabat.</p>
+          <p>La pinça ja està finalment acabada, i en Bryan s'ha encarregat de fer una altra part que també formarà part del braç.</p>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">27 d'octubre de 2026</span>
-        <span class="de-author">— Bryan</span>
-      </div>
-      <p>Avui hem treballat tot l'equip junt: la Martina, en Manel (el professor), en Pau, l'Alfons i jo, en Bryan. Ens hem centrat a continuar millorant la base del robot i la pinça. Hem revisat els moviments de la pinça perquè pugui obrir-se i tancar-se, girar i agafar les peces de joc amb més facilitat. També hem comentat alguns canvis que podem fer per millorar l'estabilitat i la mobilitat del robot.</p>
-      <p>Amb l'ajuda del professor hem anat revisant les idees i les possibles solucions als problemes que han anat apareixent durant la construcció. D'aquesta manera hem pogut compartir idees, repartir-nos les tasques i avançar conjuntament en el projecte.</p>
-      <div class="diary-photos">
-        <figure>
-          <img src="img/diari/2026-10-27-base.jpg" alt="Treballant a la base del robot amb les rodes omnidireccionals" loading="lazy">
-          <figcaption>Treballant a la base del robot</figcaption>
-        </figure>
-        <figure>
-          <img src="img/diari/2026-10-27-pinca.jpg" alt="La pinça amb els engranatges verds i les gomes taronja" loading="lazy">
-          <figcaption>La pinça, revisant com obre, tanca i gira</figcaption>
-        </figure>
-      </div>
-    </div>
+      <article class="entry fade-in" id="d-2026-11-03">
+        <div class="date"><b>03</b><span>nov.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-martina">M</span>Martina</div><span class="when">dimarts</span></div>
+          <p>Avui hem acabat de fer la pinça giratòria i hem arreglat algunes coses del robot, com la part de davant: a la part que s'encaixa a les plataformes li hem posat dues peces perquè encaixi millor i el robot no es trenqui.</p>
+          <p>També hem acabat la primera part de l'estructura que puja cap amunt i hem estat mirant com començar la segona part de l'estructura.</p>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">23 d'octubre de 2026</span>
-        <span class="de-author">— Pau</span>
-      </div>
-      <p>Avui és divendres i l'Alfons ha fet 2 hores: ha vingut a les 15 h. La Martina ha avançat el mecanisme d'ascens del robot (el mecanisme que fa guanyar alçada al robot). Mentrestant, l'Alfons ha volgut donar més mobilitat a la pinça, concretament a les arpes.</p>
-    </div>
+      <article class="entry fade-in" id="d-2026-10-28">
+        <div class="date"><b>28</b><span>oct.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-bryan">B</span>Bryan</div><span class="when">dimecres</span></div>
+          <p>Avui hem treballat tres membres de l'equip: la Martina, l'Alfons i jo, en Bryan.</p>
+          <p>Hem treballat en el reforç de la base del robot, afegint-hi millores perquè pugui aguantar millor el pes de les diferents peces i els moviments que haurà de fer. També hem reforçat l'estructura per evitar possibles problemes d'estabilitat i aconseguir que totes les parts quedin ben subjectes.</p>
+          <p>A més, hem estat treballant en el mecanisme dels engranatges que permeten aixecar la pinça. Ara estem millorant aquest sistema perquè el moviment sigui més suau, precís i eficaç, i encara estem fent proves i ajustaments perquè la pinça pugui pujar i baixar correctament.</p>
+          <div class="photos">
+            <figure><img src="img/diari/2026-10-28-estructura.jpg" alt="Base del robot reforçada amb l'estructura vertical i el cervell V5" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>La base reforçada amb l'estructura</figcaption></figure>
+            <figure><img src="img/diari/2026-10-28-pinca.jpg" alt="Mecanisme d'engranatges per aixecar la pinça amb el motor" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>El mecanisme que aixeca la pinça</figcaption></figure>
+          </div>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">20 d'octubre de 2026</span>
-        <span class="de-author">— Alfons</span>
-      </div>
-      <p>He seguit amb la pinça que en Pau em va ajudar a avançar acabant les garres; avui l'he ajustat i hi he fet canvis perquè funcioni bé. Ara és més funcional: gira, i pot agafar la peça de joc manipulant-la per obrir-se i tancar-se.</p>
-      <p>Mentrestant, els meus companys i el professor han avançat amb la base del robot, ajustant-la per fer-la més estable i ajustada al model final que volem aconseguir: un disseny propi, inspirat en idees d'altres robots que hem vist.</p>
-    </div>
+      <article class="entry fade-in" id="d-2026-10-27">
+        <div class="date"><b>27</b><span>oct.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-bryan">B</span>Bryan</div><span class="when">dimarts</span></div>
+          <p>Avui hem treballat tot l'equip junt: la Martina, en Manel (el professor), en Pau, l'Alfons i jo, en Bryan. Ens hem centrat a continuar millorant la base del robot i la pinça. Hem revisat els moviments de la pinça perquè pugui obrir-se i tancar-se, girar i agafar les peces de joc amb més facilitat. També hem comentat alguns canvis que podem fer per millorar l'estabilitat i la mobilitat del robot.</p>
+          <p>Amb l'ajuda del professor hem anat revisant les idees i les possibles solucions als problemes que han anat apareixent durant la construcció. D'aquesta manera hem pogut compartir idees, repartir-nos les tasques i avançar conjuntament en el projecte.</p>
+          <div class="photos">
+            <figure><img src="img/diari/2026-10-27-base.jpg" alt="Treballant a la base del robot amb les rodes omnidireccionals" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>Treballant a la base del robot</figcaption></figure>
+            <figure><img src="img/diari/2026-10-27-pinca.jpg" alt="La pinça amb els engranatges verds i les gomes taronja" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>La pinça: obre, tanca i gira</figcaption></figure>
+          </div>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">14 d'octubre de 2026</span>
-        <span class="de-author">— Alfons</span>
-      </div>
-      <p>Avui la Martina i jo ens hem repartit la feina a l'aula: ella ha seguit treballant en la base, perfeccionant el suport i l'estabilitat, i ja ha començat amb el mecanisme d'engranatges per moure el braç del robot. Jo, en canvi, estic treballant en la pinça, que fa servir una combinació de pneumàtica i mecànica (engranatges).</p>
-    </div>
+      <article class="entry fade-in" id="d-2026-10-23">
+        <div class="date"><b>23</b><span>oct.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-pau">P</span>Pau</div><span class="when">divendres</span></div>
+          <p>Avui és divendres i l'Alfons ha fet 2 hores: ha vingut a les 15 h. La Martina ha avançat el mecanisme d'ascens del robot (el mecanisme que fa guanyar alçada al robot). Mentrestant, l'Alfons ha volgut donar més mobilitat a la pinça, concretament a les arpes.</p>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">13 d'octubre de 2026</span>
-        <span class="de-author">— Pau</span>
-      </div>
-      <p>Avui el primer que hem fet ha sigut anar a l'aula de tecnologia a tallar unes peces necessàries per a la pinça. Mentre en Manel les tallava, hem intentat col·locar les barres davanteres dels patins, que estan en diagonal, però hem vist que havíem de retallar una mica les barres exteriors dels patins; un cop més curtes, hem pogut posar la barra diagonal sense cap complicació.</p>
-      <p>Després també hem col·locat una barra que va a l'interior del robot, que també hem hagut de tallar.</p>
-      <p>Hem tornat a la classe i en Bryan, l'Alfons i jo hem continuat amb la pinça amb les peces tallades, mentre la Martina afegia una barra frontal que ens ajudarà a col·locar-nos bé en agafar una peça de la pista.</p>
-      <div class="diary-photos">
-        <figure>
-          <img src="img/diari/2026-10-13-frontal.png" alt="Part frontal del robot amb la barra diagonal dels patins ja col·locada">
-          <figcaption>Així ha quedat la part frontal del robot amb el que hem fet avui</figcaption>
-        </figure>
-        <figure>
-          <img src="img/diari/2026-10-13-pinca.png" alt="Pinça del robot encara sense enganxar a la base, al final de la classe">
-          <figcaption>Així ha quedat la pinça al final de la classe (falta enganxar la peça a la pinça)</figcaption>
-        </figure>
-      </div>
-    </div>
+      <article class="entry fade-in" id="d-2026-10-20">
+        <div class="date"><b>20</b><span>oct.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-alfons">A</span>Alfons</div><span class="when">dimarts</span></div>
+          <p>He seguit amb la pinça que en Pau em va ajudar a avançar acabant les garres; avui l'he ajustat i hi he fet canvis perquè funcioni bé. Ara és més funcional: gira, i pot agafar la peça de joc manipulant-la per obrir-se i tancar-se.</p>
+          <p>Mentrestant, els meus companys i el professor han avançat amb la base del robot, ajustant-la per fer-la més estable i ajustada al model final que volem aconseguir: un disseny propi, inspirat en idees d'altres robots que hem vist.</p>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">30 de setembre de 2026</span>
-        <span class="de-author">— Bryan</span>
-      </div>
-      <p>Avui és dia 30 de setembre. Durant aquesta sessió de robòtica, la Martina i jo hem començat a muntar el nou disseny del robot, que vam decidir canviar ahir amb el profe Manel. L'objectiu és tenir un robot més avançat que ens permeti aconseguir una puntuació més alta a la pista.</p>
-      <p>Per això, amb l'ajuda del Manel, vam decidir redissenyar l'estructura perquè sigui més robusta i estable i, alhora, més versàtil.</p>
-      <p>Amb aquest nou disseny podrem afrontar més missions en una sola sortida, aprofitar millor el temps de la ronda i, en conseqüència, sumar més punts. Aprofitant l'experiència del muntatge anterior, mantenim la idea d'utilitzar un mateix motor per fer més d'una acció, perquè simplifica la programació i estalvia components.</p>
-    </div>
+      <article class="entry fade-in" id="d-2026-10-14">
+        <div class="date"><b>14</b><span>oct.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-alfons">A</span>Alfons</div><span class="when">dimecres</span></div>
+          <p>Avui la Martina i jo ens hem repartit la feina a l'aula: ella ha seguit treballant en la base, perfeccionant el suport i l'estabilitat, i ja ha començat amb el mecanisme d'engranatges per moure el braç del robot. Jo, en canvi, estic treballant en la pinça, que fa servir una combinació de pneumàtica i mecànica (engranatges).</p>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">25 de setembre de 2026</span>
-        <span class="de-author">— Pau</span>
-      </div>
-      <p>Avui, divendres 25 de setembre, hem estat 2 hores més treballant el robot. Érem la Martina, que ha hagut de marxar a les 16 h, i jo, en Pau. Hem continuat el molt bon treball que van fer els nostres companys el dimecres: la idea d'avui ha sigut col·locar i enganxar a la base la peça que estan fent l'Alfons i en Bryan.</p>
-      <p>Només hem tingut un petit contratemps: en enganxar la peça, els forats no coincidien per la col·locació dels separadors als eixos de la part esquerra de la peça (el fragment en què havien estat treballant el dimecres). No ha sigut cap problema: hem reduït l'espai entre barra i barra traient algun separador dels eixos i ens hem assegurat que quedés perfectament alineada i completament recta a 90º. Després hem enganxat aquesta gran peça a la base.</p>
-      <p>Un cop acabada aquesta tasca, hem fet l'altra encomanada: unir la pinça amb el braç del robot, que de moment només són dues barres de 25 però que millorarà properament. No era una tasca senzilla, perquè la pinça no s'assemblava gens a la de les instruccions, però ens les hem hagut d'enginyar. Primer hem provat d'enganxar la pinça a una barra i unir-la amb gomes, posant dos eixos, fixadors i dues gomes, però no ha funcionat.</p>
-      <p>La Martina ha hagut de marxar i m'ha tocat pensar-hi jo sol. A l'aula també hi havia dos companys de 3r que estaven fent gairebé el mateix que nosaltres i tenien exactament el mateix problema, així que hem pensat la solució junts: posar una barra d'1x5 que connecti les dues barres del braç amb la pinça i que, a sobre, la mantingui horitzontal.</p>
-      <div class="diary-photos">
-        <figure>
-          <img src="img/diari/2026-09-25-base.png" alt="Peça del mecanisme enganxada i alineada a la base del robot">
-          <figcaption>La peça enganxada i alineada a la base</figcaption>
-        </figure>
-        <figure>
-          <img src="img/diari/2026-09-25-pinca.png" alt="Pinça unida al braç del robot amb una barra d'1x5">
-          <figcaption>La pinça unida al braç amb la barra d'1x5</figcaption>
-        </figure>
-      </div>
-    </div>
+      <article class="entry fade-in" id="d-2026-10-13">
+        <div class="date"><b>13</b><span>oct.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-pau">P</span>Pau</div><span class="when">dimarts</span></div>
+          <p>Avui el primer que hem fet ha sigut anar a l'aula de tecnologia a tallar unes peces necessàries per a la pinça. Mentre en Manel les tallava, hem intentat col·locar les barres davanteres dels patins, que estan en diagonal, però hem vist que havíem de retallar una mica les barres exteriors dels patins; un cop més curtes, hem pogut posar la barra diagonal sense cap complicació.</p>
+          <p>Després també hem col·locat una barra que va a l'interior del robot, que també hem hagut de tallar.</p>
+          <p>Hem tornat a la classe i en Bryan, l'Alfons i jo hem continuat amb la pinça amb les peces tallades, mentre la Martina afegia una barra frontal que ens ajudarà a col·locar-nos bé en agafar una peça de la pista.</p>
+          <div class="photos">
+            <figure><img src="img/diari/2026-10-13-frontal.png" alt="Part frontal del robot amb la barra diagonal dels patins ja col·locada" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>La part frontal del robot</figcaption></figure>
+            <figure><img src="img/diari/2026-10-13-pinca.png" alt="Pinça del robot encara sense enganxar, al final de la classe" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>La pinça al final de la classe (falta enganxar-hi la peça)</figcaption></figure>
+          </div>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">23 de setembre de 2026</span>
-        <span class="de-author">— Bryan</span>
-      </div>
-      <p>Avui, dia 23 de setembre, en Bryan i l'Alfons hem treballat en el muntatge d'una part clau del robot: el sistema d'elevació de la pinça combinat amb el mecanisme de canvi de color dels panells de la pista.</p>
-      <p>El primer que hem muntat ha estat una estructura formada per 4 columnes verticals, que és l'esquelet que subjecta i guia tot el sistema d'engranatges; gràcies a aquesta configuració, el moviment de pujada és estable i recte, sense que l'estructura es torci o es desnivelli. Dins de les columnes hi hem col·locat un conjunt d'engranatges connectats entre ells, la funció dels quals és transmetre el gir del motor al llarg de tota l'estructura, ajustant la força i la velocitat necessàries per moure la pinça amb precisió.</p>
-      <p>El gir generat pel motor passa a través dels engranatges i fa que la pinça pugi o baixi segons el sentit de gir: aquest és el mecanisme principal que ens permetrà agafar i deixar anar elements durant la partida.</p>
-      <p>El més interessant d'aquest muntatge és que hem aconseguit que, alhora que puja la pinça, una roda connectada al mateix sistema giri i canviï el color d'uns panells de la pista de joc; és a dir, amb un sol motor aconseguim dues accions simultànies: elevar la pinça i voltejar els panells. Aquest disseny és útil perquè, en sincronitzar els dos moviments amb el mateix sistema de transmissió, estalviem motors i simplifiquem la programació, ja que no cal controlar dos mecanismes per separat: activant un sol motor aconseguim l'efecte doble.</p>
-    </div>
+      <article class="entry fade-in" id="d-2026-09-30">
+        <div class="date"><b>30</b><span>set.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-bryan">B</span>Bryan</div><span class="when">dimecres</span></div>
+          <p>Durant aquesta sessió de robòtica, la Martina i jo hem començat a muntar el nou disseny del robot, que vam decidir canviar ahir amb el profe Manel. L'objectiu és tenir un robot més avançat que ens permeti aconseguir una puntuació més alta a la pista.</p>
+          <p>Per això, amb l'ajuda del Manel, vam decidir redissenyar l'estructura perquè sigui més robusta i estable i, alhora, més versàtil.</p>
+          <p>Amb aquest nou disseny podrem afrontar més missions en una sola sortida, aprofitar millor el temps de la ronda i, en conseqüència, sumar més punts. Aprofitant l'experiència del muntatge anterior, mantenim la idea d'utilitzar un mateix motor per fer més d'una acció, perquè simplifica la programació i estalvia components.</p>
+        </div>
+      </article>
 
-    <div class="diary-entry fade-in">
-      <div class="de-meta">
-        <span class="de-date">22 de setembre de 2026</span>
-        <span class="de-author">— Alfons</span>
-      </div>
-      <p>Avui és dia 22 de setembre, però no és el primer dia de feina: vam començar el curs passat, a finals de tercer, desmuntant el robot d'aquell any i vam deixar-ho aquí en espera del curs següent.</p>
-      <p>El primer dia de robòtica de 4t va ser el 15 de setembre. El professor ens ho va explicar tot: hauríem de començar muntant la pista de pràctica i el robot per avançar feina i tenir el robot fet com més aviat millor. Això implica saber manipular i identificar eines i material —fonamental per a un bon flux de treball—, organitzar-nos tant individualment com en equip, i tirar endavant el treball de recerca: buscar, dissenyar i analitzar robots, i preparar tècniques i plans de joc per tenir avantatge a les partides.</p>
-      <p>Aquell dia 15 vam acabar la pista de joc de l'aula i vam continuar amb el robot, que ja tenia la base començada del curs anterior, ajudant-nos de les instruccions. Avui, dia 22, seguim treballant en la part del mecanisme i l'estructura del robot: la pinça, que és clau perquè el robot pugui jugar sense problemes a la pista i sigui estable, versàtil i amb bon rendiment; i els pilars del robot, on van tots els engranatges que fan funcionar el mecanisme.</p>
-    </div>
+      <article class="entry fade-in" id="d-2026-09-25">
+        <div class="date"><b>25</b><span>set.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-pau">P</span>Pau</div><span class="when">divendres</span></div>
+          <p>Avui hem estat 2 hores més treballant el robot. Érem la Martina, que ha hagut de marxar a les 16 h, i jo, en Pau. Hem continuat el molt bon treball que van fer els nostres companys el dimecres: la idea d'avui ha sigut col·locar i enganxar a la base la peça que estan fent l'Alfons i en Bryan.</p>
+          <p>Només hem tingut un petit contratemps: en enganxar la peça, els forats no coincidien per la col·locació dels separadors als eixos de la part esquerra de la peça (el fragment en què havien estat treballant el dimecres). No ha sigut cap problema: hem reduït l'espai entre barra i barra traient algun separador dels eixos i ens hem assegurat que quedés perfectament alineada i completament recta a 90º. Després hem enganxat aquesta gran peça a la base.</p>
+          <p>Un cop acabada aquesta tasca, hem fet l'altra encomanada: unir la pinça amb el braç del robot, que de moment només són dues barres de 25 però que millorarà properament. No era una tasca senzilla, perquè la pinça no s'assemblava gens a la de les instruccions, però ens les hem hagut d'enginyar. Primer hem provat d'enganxar la pinça a una barra i unir-la amb gomes, posant dos eixos, fixadors i dues gomes, però no ha funcionat.</p>
+          <p>La Martina ha hagut de marxar i m'ha tocat pensar-hi jo sol. A l'aula també hi havia dos companys de 3r que estaven fent gairebé el mateix que nosaltres i tenien exactament el mateix problema, així que hem pensat la solució junts: posar una barra d'1x5 que connecti les dues barres del braç amb la pinça i que, a sobre, la mantingui horitzontal.</p>
+          <div class="photos">
+            <figure><img src="img/diari/2026-09-25-base.png" alt="Peça del mecanisme enganxada i alineada a la base del robot" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>La peça enganxada i alineada a la base</figcaption></figure>
+            <figure><img src="img/diari/2026-09-25-pinca.png" alt="Pinça unida al braç del robot amb una barra d'1x5" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>La pinça unida al braç amb la barra d'1x5</figcaption></figure>
+          </div>
+        </div>
+      </article>
 
-    <div class="diary-more">📓 El diari continuarà amb noves entrades a mesura que avanci el curs.</div>
+      <article class="entry fade-in" id="d-2026-09-23">
+        <div class="date"><b>23</b><span>set.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-bryan">B</span>Bryan</div><span class="when">dimecres</span></div>
+          <p>Avui en Bryan i l'Alfons hem treballat en el muntatge d'una part clau del robot: el sistema d'elevació de la pinça combinat amb el mecanisme de canvi de color dels panells de la pista.</p>
+          <p>El primer que hem muntat ha estat una estructura formada per 4 columnes verticals, que és l'esquelet que subjecta i guia tot el sistema d'engranatges; gràcies a aquesta configuració, el moviment de pujada és estable i recte, sense que l'estructura es torci o es desnivelli. Dins de les columnes hi hem col·locat un conjunt d'engranatges connectats entre ells, la funció dels quals és transmetre el gir del motor al llarg de tota l'estructura, ajustant la força i la velocitat necessàries per moure la pinça amb precisió.</p>
+          <p>El gir generat pel motor passa a través dels engranatges i fa que la pinça pugi o baixi segons el sentit de gir: aquest és el mecanisme principal que ens permetrà agafar i deixar anar elements durant la partida.</p>
+          <p>El més interessant d'aquest muntatge és que hem aconseguit que, alhora que puja la pinça, una roda connectada al mateix sistema giri i canviï el color d'uns panells de la pista de joc; és a dir, amb un sol motor aconseguim dues accions simultànies: elevar la pinça i voltejar els panells. Aquest disseny és útil perquè, en sincronitzar els dos moviments amb el mateix sistema de transmissió, estalviem motors i simplifiquem la programació, ja que no cal controlar dos mecanismes per separat.</p>
+        </div>
+      </article>
+
+      <article class="entry fade-in" id="d-2026-09-22">
+        <div class="date"><b>22</b><span>set.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-alfons">A</span>Alfons</div><span class="when">dimarts</span></div>
+          <p>Avui no és el primer dia de feina: vam començar el curs passat, a finals de tercer, desmuntant el robot d'aquell any i vam deixar-ho aquí en espera del curs següent.</p>
+          <p>El primer dia de robòtica de 4t va ser el 15 de setembre. El professor ens ho va explicar tot: hauríem de començar muntant la pista de pràctica i el robot per avançar feina i tenir el robot fet com més aviat millor. Això implica saber manipular i identificar eines i material —fonamental per a un bon flux de treball—, organitzar-nos tant individualment com en equip, i tirar endavant el treball de recerca: buscar, dissenyar i analitzar robots, i preparar tècniques i plans de joc per tenir avantatge a les partides.</p>
+          <p>Aquell dia 15 vam acabar la pista de joc de l'aula i vam continuar amb el robot, que ja tenia la base començada del curs anterior, ajudant-nos de les instruccions. Avui seguim treballant en la part del mecanisme i l'estructura del robot: la pinça, que és clau perquè el robot pugui jugar sense problemes a la pista i sigui estable, versàtil i amb bon rendiment; i els pilars del robot, on van tots els engranatges que fan funcionar el mecanisme.</p>
+        </div>
+      </article>
+
+      <div class="card end-card fade-in">El diari continuarà amb noves entrades a mesura que avanci el curs.</div>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">SANT JORDI ROBOTICS</div>
-  <p>Escola Sant Jordi · Palafrugell · Baix Empordà</p>
-  <p style="margin-top:.3rem;">4t d'ESO · VEX V5 Robotics Competition · Temporada 2026–27</p>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html"><img src="img/logo.svg" alt=""><span class="brand-text"><b>Sant Jordi</b><small>Robotics</small></span></a>
+      <p>Equip de robòtica VEX V5 de 4t d'ESO de l'Escola Sant Jordi · Palafrugell · Baix Empordà.</p>
+    </div>
+    <div>
+      <h4>El joc</h4>
+      <ul>
+        <li><a href="index.html#override">Override</a></li>
+        <li><a href="index.html#normes">Normes</a></li>
+        <li><a href="index.html#puntuacio">Puntuació</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>L'equip</h4>
+      <ul>
+        <li><a href="#diari">Diari</a></li>
+        <li><a href="#reptes">Trajectòria</a></li>
+        <li><a href="#progres">Progrés del robot</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>VEX V5 Robotics Competition · Temporada 2026–27</span><span>4t d'ESO</span></div>
 </footer>
 
 <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
