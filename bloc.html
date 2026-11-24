@@ -41,8 +41,8 @@
       <div class="meta-row">
         <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-users"/></svg><b>4</b><span>membres</span></div>
         <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-trophy"/></svg><b>4</b><span>temporades</span></div>
-        <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-book"/></svg><b>13</b><span>entrades</span></div>
-        <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-bot"/></svg><b>82%</b><span>robot</span></div>
+        <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-book"/></svg><b>16</b><span>entrades</span></div>
+        <div class="meta-chip"><svg class="ico"><use href="img/icons.svg#i-bot"/></svg><b>70%</b><span>robot</span></div>
       </div>
     </div>
   </div>
@@ -172,10 +172,10 @@
 
     <div class="card fade-in">
       <div class="progress-head">
-        <div class="card-head" style="margin:0"><div class="icon-tile"><svg class="ico"><use href="img/icons.svg#i-bot"/></svg></div><div><h3>Robot Override</h3><p style="font-size:13.5px;color:var(--muted)">Actualitzat el 6 de novembre de 2026</p></div></div>
-        <b>82%</b>
+        <div class="card-head" style="margin:0"><div class="icon-tile"><svg class="ico"><use href="img/icons.svg#i-bot"/></svg></div><div><h3>Robot Override</h3><p style="font-size:13.5px;color:var(--muted)">Actualitzat el 20 de novembre de 2026</p></div></div>
+        <b>70%</b>
       </div>
-      <div class="bar"><i style="width:82%"></i></div>
+      <div class="bar"><i style="width:70%"></i></div>
       <ul class="steps">
         <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Pista de pràctica</li>
         <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Base reaprofitada</li>
@@ -184,8 +184,10 @@
         <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Barra frontal i patins</li>
         <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Base reforçada</li>
         <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Pinça giratòria acabada</li>
-        <li class="now"><svg class="ico"><use href="img/icons.svg#i-dot"/></svg>Estructura d'ascens (2a part)</li>
-        <li class="now"><svg class="ico"><use href="img/icons.svg#i-dot"/></svg>Mecanisme del braç</li>
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Cervell V5 col·locat</li>
+        <li class="done"><svg class="ico"><use href="img/icons.svg#i-check"/></svg>Redisseny: model DR4B</li>
+        <li class="now"><svg class="ico"><use href="img/icons.svg#i-dot"/></svg>Doble reversa (1a part feta)</li>
+        <li class="todo"><svg class="ico"><use href="img/icons.svg#i-circle"/></svg>Completar la doble reversa</li>
         <li class="todo"><svg class="ico"><use href="img/icons.svg#i-circle"/></svg>Programació autònoma</li>
         <li class="todo"><svg class="ico"><use href="img/icons.svg#i-circle"/></svg>Proves a pista</li>
       </ul>
@@ -241,6 +243,39 @@
     </div>
 
     <div class="timeline">
+
+      <article class="entry fade-in" id="d-2026-11-20">
+        <div class="date"><b>20</b><span>nov.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-pau">P</span>Pau</div><span class="when">divendres</span></div>
+          <p>Avui hem seguit amb el que vam acordar dimarts i amb la feina que van fer els companys dimecres. Hem tornat a mirar el vídeo del robot de referència i l'esquema que va fer la Martina, per tenir clar com havia de quedar el mecanisme.</p>
+          <p>Entre la Martina i jo hem continuat el muntatge, i al final de la classe ja teníem feta la primera part del mecanisme de doble reversa (DR4B).</p>
+          <p>El pròxim dia continuarem amb la mateixa idea: seguir construint el robot a partir del model del vídeo fins a completar tot el mecanisme.</p>
+        </div>
+      </article>
+
+      <article class="entry fade-in" id="d-2026-11-17">
+        <div class="date"><b>17</b><span>nov.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-alfons">A</span>Alfons</div><span class="when">dimarts</span></div>
+          <p>Avui hem pres una decisió important: redissenyar el robot seguint el model <strong>DR4B</strong> (Double Reverse Four-Bar, o «doble reversa»). Volíem un robot millor i més eficient, així que hem canviat l'estructura i el braç, desmuntant les parts que ja teníem per tornar-les a muntar d'una manera més correcta.</p>
+          <p>Un DR4B són dos mecanismes de quatre barres muntats un sobre l'altre, el segon en sentit invers. Gràcies a aquesta combinació, quan el motor fa pujar el braç, la pinça s'eleva gairebé en línia recta i es manté sempre horitzontal, sense inclinar-se. Plegat ocupa poc espai, cosa que ens ajuda a complir la mida inicial de 18 polzades, però desplegat arriba molt amunt: just el que necessitem a Override per col·locar Pins i Tasses als Goals més alts.</p>
+          <p>Abans de començar hem investigat altres models de robot, i vam agafar aquest vídeo de referència de DR4B per millorar el nostre robot. Hi surt un robot d'Override amb el mecanisme de doble reversa en funcionament, i ens ha servit per entendre com encaixen les barres, on van els punts de gir i com es transmet el moviment.</p>
+          <p>A partir del vídeo hem començat a planificar-ho tot i a pensar com adaptar-ho a les peces que tenim. El primer pas ha estat desmuntar les dues barres laterals per moure-les de lloc, que és on anirà la nova estructura.</p>
+          <div class="photos">
+            <figure class="portrait-fig"><img class="portrait" src="img/diari/2026-11-17-referencia-dr4b.jpg" alt="Captura del vídeo de referència: un robot d'Override amb un braç de doble reversa (DR4B) aixecat" loading="lazy"><figcaption><svg class="ico"><use href="img/icons.svg#i-camera"/></svg>Vídeo de referència: «Mecanismos para VEX Override, parte 4: doble reversa», de @vexparatodos</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry fade-in" id="d-2026-11-10">
+        <div class="date"><b>10</b><span>nov.</span><small>2026</small></div>
+        <div class="card">
+          <div class="card-head"><div class="who"><span class="avatar av-pau">P</span>Pau</div><span class="when">dimarts</span></div>
+          <p>Avui hem acabat d'enganxar bé les barres que vam moure divendres. També hem tornat a posar els pilarets dels patins i hem col·locat el cervell del robot (el V5 Brain).</p>
+          <p>A més, per fi hem enganxat les peces del mecanisme del braç i hem unit les dues peces amb dos eixos entre els engranatges.</p>
+        </div>
+      </article>
 
       <article class="entry fade-in" id="d-2026-11-06">
         <div class="date"><b>06</b><span>nov.</span><small>2026</small></div>

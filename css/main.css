@@ -664,3 +664,7 @@ strong { color: var(--ink); font-weight: 600; }
   .footer-inner { grid-template-columns: 1fr; }
 }
 #vex { padding-bottom: 0; }
+.photos .portrait-fig { max-width: 230px; }
+.photos img.portrait { aspect-ratio: 9 / 16; }
+.photos figcaption { align-items: flex-start; }
+.photos figcaption .ico { margin-top: 2px; }
